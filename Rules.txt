@@ -1,0 +1,394 @@
+
+
+Rules:
+  Each player has 3 lanes of 2 card slots (2 rows) and starts with 5 cards in hand.
+  Every turn, each player can play any 2 cards from hand, face down, on either the Back Row or Front Row
+  When everyone is finished, all players do the following in parallel:
+  - Reveal all facedown cards simultaneously. If they activate 'Reveal' effects, they activate from left to right.
+  - Each player fights a random player:
+    - In a fight, each player sums the cards powers on each lane
+    - Each of the lanes fights the opposite lane
+    - For each lane, whoever has the highest lane power gets 1 victory point
+  - Slide all Back Row cards to the Front Row (except Spells, Persistent cards, etc). Any Front Row cards are destroyed if replaced.
+  - Look at 3 cards, draw 2 and put one in the exile pile
+  
+  The game ends after 9 rounds.
+  
+Warlords: |
+    
+    Each Warlord has a deck of 6 cards that are always drawn in the same order.
+    On draw phase, you can choose to draw a Warlord card instead of a normal card out of the 2 drawn cards.
+    Warlord cards are more thematic and powerful.
+
+Actual phases:
+- Reveal
+- After reveal
+- On draw phase
+- On slide (phase)
+
+Keywords:
+- On (every) turn start
+- Reveal
+- In combat only
+- On slide up
+- After slide up
+
+- Persistent (On slide phase, only slides up if you want to)
+- Burned (Spell)
+- Free
+- Obvious (played face up)
+- Attach
+- Trigger
+
+Resources (9 turns) (2 points per win, 1 point per tie):
+    3 lanes:
+        - Points: 27 Points
+        - Cards played: 18-21 Cards (12 - 15 in Graveyard)
+        - Cards consumed: 31 Cards  (5 + 8 * 3 + ~3)
+    3 lanes (for upgrade on turn 3):
+        - Points (ties): 6 Points
+        - Cards played: 4-5 Cards (1 in Graveyard)
+    3 lanes (for upgrade on turn 6):
+        - Points (ties): 15 Points
+        - Cards played: 11 Cards (7 in Graveyard)
+    
+    Turn 1 Start: 0 Points, 0 Cards in Graveyard
+    Turn 2 Start: 3 Points, 0 Cards in Graveyard
+    Turn 3 Start: 6 Points, 1 Card in Graveyard
+    Turn 4 Start: 9 Points, 3 Card in Graveyard
+    Turn 5 Start: 12 Points, 5 Cards in Graveyard
+    Turn 6 Start: 15 Points, 7 Cards in Graveyard
+    
+    Upgrade Costs:
+
+        Resources:
+            Graveyard Card: 1 Resource
+            Hand Card: 2 Resource
+            Point: 1 Resource
+
+        Tier 2: 3 Resources (3 cards in graveyard, 1 card in hand, 3 Points)
+        Tier 3: 6 Resources (6 cards in graveyard, 3 cards in hand, 6 Points)
+
+
+
+VARIANT 3x3 Resources (9 turns) (2 points per win, 1 point per tie):
+    3 lanes:
+        - Points: 27 Points
+        - Cards played: 18-21 Cards (12 - 15 in Graveyard)
+        - Cards consumed: 31 Cards  (5 + 8 * 3 + ~3)
+    3 lanes (for upgrade on turn 3):
+        - Points (ties): 6 Points
+        - Cards played: 4-5 Cards (1 in Graveyard)
+    3 lanes (for upgrade on turn 6):
+        - Points (ties): 15 Points
+        - Cards played: 11 Cards (7 in Graveyard)
+    
+    Turn 1 Start: 0 Points, 0 Cards in Graveyard
+    Turn 2 Start: 3 Points, 0 Cards in Graveyard
+    Turn 3 Start: 6 Points, 0 Cards in Graveyard
+    Turn 4 Start: 9 Points, 1 Card in Graveyard
+    Turn 5 Start: 12 Points, 2 Cards in Graveyard
+    Turn 6 Start: 15 Points, 4 Cards in Graveyard
+
+    Upgrade Costs:
+
+        Resources:
+            Graveyard Card: 1 Resource
+            Hand Card: 2 Resource
+            Point: 0.5 Resource
+
+        Tier 2: 2 Resources (0 cards in graveyard, 1 card in hand, 4 Points)
+        Tier 3: 6 Resources (6 cards in graveyard, 3 cards in hand, 12 Points)
+
+
+
+Leveling Up (Tier):
+a) Automatic after turns 3 and 6:
+    + Streamlined
+    - Too streamlined
+b) Automatic, based on deck size:
+    + More streamlined and less cluttered
+    - Less balanced
+    - Less clean draw
+c) By cost:
+
+    Pay with Points:
+        + Easy
+        - Snowbally
+    Pay with graveyard:
+        + Easy
+        + Promotes economy
+        - RNG
+    Pay with cards in hand:
+        + Easy
+        - Destroys economy
+
+
+Buy Warlord Cards:
+    - 1 Resource (requires that Tier) (can not be done on the same turn as you upgrade)
+
+Preventing Griefing:
+    A) Game Plan Card:
+        - Determine the "game plan" by drawing a game plan card.
+        - This card indicates which lanes you can play on this turn:
+            - [1 2] [2 3] [1 3]
+        - This is useful to make players not wait for other players to play cards first
+        Pros and Cons:
+            + Easy and streamlined
+            - Really takes away from strategy
+            + Might open up new strategies
+    B) Turns:
+        - Players take turns playing cards, but later players can play earlier if they want
+        - Player with the most points goes first
+        Pros and Cons:
+            - Less competitive
+            - Games take longer
+
+
+Mechanics:
+- Lanes and rows / positions
+- Cards in hand
+- Face-down / Face-up
+- Buffs / debuffs
+- Warlord cards / decks
+- Points
+
+Tribes:
+- Undead | have Death effects
+- Humans | economy
+- Demons | 
+- Beasts | Scale and attach
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tier 1 (3 power | 1 Spell buff | 2 Spell power):
+  - 0.5 | Reveal: Fill all your empty board slots with (1) tokens. They stay there until a card is played there.
+  - 1 | Every Turn Start: gain (+1)
+  - 1 | Before the lane fight, permanently steal (1) buff from one of the opposing lane cards (if any has any buffs) (enemy chooses which).
+  - 1 | Reveal: Give all your minions with even power (+1).
+  - 1 [Demon] | Whenever a card enters your Graveyard, gain (+1)
+  - 1.5 | Reveal: next turn, you can play one extra card.
+  - 1.5 | On slide up: instead of sliding up, destroy this and replace it with a random Tier 2 card, face down.
+  - 2 | Reveal: draw a card
+  - 2 | Reveal: Give a minion (+1).
+  - 2 | Reveal: Give a minion (-2) and a different minion (+2) (can go below 0).
+  - 2 | Death: Draw a Tier 2 card
+  - 2 | Death: Gain 1 Point
+  - 2 | During your turn, you can spend any number of Resources to gain (+1) for each spent.
+  - 2 | The card below this has (+2) in combat only (if it has power only).
+  - 2 | When another friendly minion dies, transfer half of its buffs (if positive) to another minion (rounded down).
+  - 2 | Every Combat End: You may spend Resources to Level Up now, or to draw a Warlord Card (doesn't count to the turn limit).
+  - 2 [Human] | You can play Spells on the Side Board (face down, as normal). They are burned at slide-up phase, even if persistent.
+  - 2 [Human] | Reveal: Draft a Human from either the Tier 1 or Tier 2 deck.
+  - 2 [Demon] | Trigger: Play when combat starts.
+  - 2.5 | Death: Add the top card from the Tier 2 deck to your Graveyard.
+  - 2.5 | Reveal: Get a (+1) token (you can't use it this turn)
+  - 2.5 | Reveal: Swap 2 minions on your board, but the positions keep buffs/debuffs.
+  - 3
+  - 3 [Demon] | Every turn start: You can discard a card to gain power equal to its Tier.
+  - 3 | Free. Obvious. To play this, spend resources equal to (6 - your Points) (down to 0).
+  - 3 | Every Turn Start: Give a friendly minion (-1) and another (+1).
+  - 3.5 | Every Turn Start: get (-1)
+  - Spell | (2)
+  - Spell | Free. Reveal: give the above minion (+1)
+  - Spell | Reveal: the above minions steals all buffs/debuffs from its neighbors (left and right if any)
+  - Spell | Free. Reveal: Look at the top 3 cards of an available deck and exile 2 of them. Draw the other.
+  - Spell | Free. Trigger: play any time (but not directly in combat) to to reorder your face-up minions.
+  - Spell | Reveal: destroy one of your minions, then put it back in your hand.
+  - Spell | Reveal: Draw 2 cards.
+  - Spell | Free. Reveal: Turn Start, remove all debuffs from a friendly minion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tier 2 (5 power | 2 Spell buff | 3.5 Spell power):
+    - 2.5 | If this lane loses a battle, your next lane has (+3) this combat.
+    - 3 | Persistent
+    - 3 | If this lane loses a battle, gain (+2) permanently
+    - 4 | Whenever you reveal a Spell, gain (+1) (even if at the same time as this).
+    - 3 | Every Turn Start: neighbors get (+1) (if they have power)
+    - 3 | Every Turn Start: Give a minion (+1). If you are not the winning player, also give a different minion (+1).
+    - 3.5 | Whenever you Reveal a Spell, give a minion (+1).
+    - 4 | You can choose to destroy the below minion instead of sliding it up.
+    - 4 | In combat only, has (+1) for each empty slot on your board.
+    - 4 | When you reveal a minion, give it (+1)
+    - 4 | Gain (+1) whenever you reveal a minion (except the turn when this is revealed)
+    - 4 | Reveal: Choose a minion type. Give all your minions of that type (+1).
+    - 4.5 | Every Turn Start: If you 2 or more lanes last combat, gain 1 Point.
+    - 4.5 | Reveal: Each player gives a card in their current hand to the player to their right (you too).
+    - 6 | Has (-2) if there's another card on the same lane
+    - 3 [Human] | Reveal: Choose one - draw a card for each Human on your board (minimum 1), or give a minion (+1) for each Human on your board (minimum (+1)).
+    - 3.5 [Human] | Reveal: Buff all your Humans up to the nearest multiple of 3 (for fractions, nearest to 3.5, 6.5, 9.5, etc).
+    - 4 [Human] | Reveal: Draft a Human.
+    - 4.5 [Undead] | Death: Aura: After you reveal an Undead, give it (+1)
+    - 5 [Undead] | On slide up: Destroy a friendly card (even the one being slid over).
+    - 2 [Beast] | Death: Attach to a friendly Beast. When it is destroyed, attach this to a different Beast.
+    - 2 [Beast] | Death: Aura: Whenever a friendly Beast dies, give a minion (+1).
+    - 2 [Beast] | Every Turn Start: Gain (+1) for each Beast on your board.
+    - 3 [Beast] | Death: Give this lane (+1) permanently, no matter what cards are on it.
+    - 1 [Demon] | Death: Freely play a Demon from your hand. Buff/debuff it until it becomes a (7).
+    - Spell | (3.5)
+    - Spell | Reveal: Give a minion power equal to the number of your back row cards.
+    - Spell | Free. Gain 1 Point.
+    - Spell | Free. Obvious. You may play an extra card this turn.
+    - Spell | Persistent. Your Front-Row minions have (+1) in combat only.
+    - Spell | Attach to a Face-Down minion. That minion becomes Persistent.
+    - Spell | Reveal: give all your Front Row minions (+1)
+    - Spell | Free. Reveal: Exile any number of neutral cards in your hand. Then draw that many cards, of the same tiers.
+    - Spell | Trigger. Prevent a friendly minion from being destroyed. If slid over, freely play it back anywhere on your board face-up. It keeps buffs/debuffs.
+    - Spell | Trigger. Play any time on turn start. Swap the cards from 2 of your lanes (with all buffs/debuffs).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tier 3 (7 | 4 Spell buff | 5 Spell power):
+    - 0 | In combat, you can't lose the lane battle, and gain 1 Point. Then destroy this.
+    - 0 | Force this lane combat to tie and destroy this minion.
+    - 2 | In combat only, neighbor lanes have extra power equal to this minion's power.
+    - 3 | At the end of your turn, give a friendly minion of each different type (+1).
+    - 3.5 | Whenever you destroy a minion, gain power equal to its Tier.
+    - 4 [Undead] | On slide up: Attach to the minion this slid over.
+    - 4 | Whenever you reveal a Spell, gain (+2)
+    - 5 [Demon] | On Reveal: Gain (+2) for each Demon in your graveyard.
+    - 5 | Every Turn Start: you can spend 1 Resource to gain 1 Point.
+    - 5 | Whenever you destroy a minion, give all your other minions (+1) (including this).
+    - 5 | On slide up: gain all buffs/debuffs from the destroyed minion.
+    - 5 | Reveal: Draft a minion of each type you don't have on board from the Exile pile (then shuffle it).
+    - 5 | Whenever you buff another minion, this also gains those buffs.
+    - 5 | Whenever a minion gains a buff(s), give it an extra (+1) (doesn't retrigger similar effects).
+    - 5 | In combat only, has extra (+1) for each card in your hand
+    - 6 | Reveal: Choose a minion type. Gain (+1) for each minion of that type in your graveyard.
+    - 5.5 | Reveal: gain (+1) for each Spell in your graveyard.
+    - 5.5 | In combat only, has (+1) for each Minion type you have on board.
+    - 6 [Undead] | Every Combat End: Destroy a friendly card. Gain (+2)
+    - 6 | Reveal: Set this minion's power equal to the most powerful minion on your board (including buffs).
+    - 6 | Reveal: Each other player transfers a card from their Graveyard to your Graveyard (they choose which).
+    - 6 | In combat only, has (+1) for each Warlord Card on both boards.
+    - 6 | If this lane wins a combat, gain 1 extra Point.
+    - 6 | Persistent on Front Row.
+    - 6.5 | Reveal: all other players give one of their minions (-1)
+    - 7
+    - 8 | Reveal: discard a card.
+    - 9 [Demon] | Reveal: Get (-1) for each card in your hand.
+    - Spell | (5)
+    - Spell | Reveal: Buff/debuff any minion until it becomes an (8).
+    - Spell | Reveal: buff the above minion by 50% permanently (rounded down).
+    - Spell | Reveal: Each other player must give a minion (-1). Give a total of (+3) to your minions, distributed as you like.
+    - Spell | Reveal: Draw 3 cards.
+
+Class Cards (?):
+- T1: Spell | Free. Reveal: prolong the game length total by 1 round. Draw 1 card.
+- T1: Spell | Free. Reveal: Each other player loses 1 Point.
+- T1: Spell | Free. Reveal: Draw a Tier 2 card.
+- T1: 3 | Every Turn Start: discard any number of cards. Gain (+1) for each card discarded.
+- T1: 3 | Reveal: Next combat, whenever you win a lane battle, add the top Tier 2 deck card to your Graveyard.
+- T1: 4
+
+- T2: Spell | Free. Reveal: you can pick your opponent this battle.
+- T2: 3 | Reveal: choose a card from your graveyard and put it in your hand.
+- T2: Spell | Free. 1.5 | when burned, return this to your hand.
+- T2: Spell | After Reveal: You and the winning player choose a card on the board to swap (buffs are not kept) (each plays the card face-up wherever on board) (you choose who if tie).
+- T2: 2 | Persistent. Reveal: When you find out who your next opponent is, draw the top card from their Warlord deck.
+- T2: Spell | Reveal: Give (+1) 3 times, distributed among your minions as you like.
+- T2: Spell | Reveal: Transform a minion into a Drafted minion 1 Tier higher (if possible). The previous minion is exiled with all buffs.
+
+- T3: 1.5 | When you draw a card, gain (+1)
+- T3: 2 | You can play one extra card on your Turn.
+- T3: 3 | After slide up: Draft a copy of a minion you have.
+- T3: 5 | Turn Start: once, destroy the minion to the left of this and gain its current stats and buffs.
+- T3: 4.5 | Reveal: Draw 4 Tier 1 cards.
+- T3: Spell | Reveal: lose 1 Point. Give your front row minions (+2).
+- T3: Spell | Reveal: Your next Revealed Spell casts twice if possible (or has double power).
+
+- T4: 3 | Every Turn Start: draw a Tier 1 card and freely play it face down.
+- T4: 3 | Double all buffs/debuffs this minion gets.
+- T4: 3 | Death: a chosen minion triggers its reveal effect.
+- T4: 5 | On draw phase, after you draw, you may discard a card and draw another.
+- T4: 6 | When destroyed, once, freely play this minion again on the back row on the same lane, face up.
+- T4: Spell | Free. Obvious. Aura: once per turn, on slide-up, you can choose to not slide a minion up.
+- T4: 5 | Reveal: Trigger all Reveal effects from your Graveyard.
+
+- T5: 5.5 | Reveal: Draft 
+- T5: 4 | In combat only, has (+1) for every card in your Graveyard
+- T5: 7 | If this wins the lane battle, the power difference is carried over to the next lane.
+- T5: Spell | Free. Reveal: all other players must choose a card card to return from their board to their hand (minions lose buffs). Face down cards don't activate if returned to hand.
+- T5: Spell | Choose a lane number. All players destroy all cards in that lane.
+- T5: Spell | (7)
+
+- T6: 6.5 | Every turn start: Draft a Tier 1 Minion. Attach it to this.
+- T6: 6 | Reveal: Each other player discards a card. Gain power equal to the most powerful discarded card's power.
+- T6: 9
+- T6: 0 | In combat only, has (+1) for each Point you have.
+- T6: 6 | Reveal: give this minion buffs to equal the biggest minion on any board (that was not revealed this round).
+- T6: 0 | In combat only, show your opponent your cards in hand. This minion has extra power equal to the sum of your hand cards' power.
+
+
+Warlords:
+- (*) Once per draw phase, look at 1 extra card. Exile it, or draw it and exile a different card you just drew.
+- You start the game with 2 extra Tier 1 cards in hand.
+- You start the game with 1 extra Tier 2 card in hand.
+- On draw phase, if you have the most points (even if tied), draw a Tier 1 card.
+- Every Turn Start: if you lost 2 or more lanes last combat, give a minion (+1)
+- You start the game with 1 Point and 1 random Tier 1 card in your Graveyard.
+- When you upgrade, draw a card from a Tier you were previously.
+- If you end the game on Tier 2, gain 2 Points.
+- You skip Tier 2, but leveling to Tier 3 costs 2 less.
+- At any point, you may spend any number of Resources to give a minion (+1).
+- You have an obvious side shop that always has 3 available cards of your Tier. At any point, you can buy one of them with 1 resource.
+- You start with -2 Points. Every Turn End: If you have 0 cards in hand, draw 1 card.

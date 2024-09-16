@@ -1,0 +1,9 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    vertical-align: top;
+}
