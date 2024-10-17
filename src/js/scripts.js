@@ -183,8 +183,31 @@ async function drawCards(cards, isWarlord) {
         }
     }
 }
+async function drawCardsForTTS(cards, isWarlord) {
+    if (cards.length > 69) {
+        throw('I dont think 70 or more works with TTS.')
+    }
 
-(async function() {
+    const canvas = document.createElement('canvas')
+    canvas.width = 10 * CARD_WIDTH
+    canvas.height = 7 * CARD_HEIGHT
+    document.body.appendChild(canvas)
+    for (let i = 0; i < cards.length; i++) {
+        const card = cards[i]
+        const x = (i % 10) * CARD_WIDTH
+        const y = Math.floor(i / 10) * CARD_HEIGHT
+        await drawCard(canvas, card, x, y, isWarlord)
+    }
+
+}
+
+async function createCardsForTTS() {
+    await drawCardsForTTS(Cards['Tier 1'])
+}
+
+createCardsForTTS()
+
+async function createCardsForPrint() {
     let normalCards = [...Cards['Tier 1'], ...Cards['Tier 2'], ...Cards['Tier 3']]
     let cardsTwice = []
     for (let i = 0; i < normalCards.length; i++) {
@@ -195,4 +218,4 @@ async function drawCards(cards, isWarlord) {
     await drawCards(Warlords, true)
     await drawCards(WarlordCards)
     console.log(`Done. Made ${sheetsMade} sheets.`)
-})()
+}
