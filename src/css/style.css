@@ -1,9 +1,12 @@
 @font-face {
-    font-family: Garamond;
-    src: url('fonts/EBGaramond-Regular.ttf');
+    font-family: DynaPuff;
+    src: url('fonts/DynaPuff.ttf');
 }
 @font-face {
-    font-family: GaramondBold;
-    src: url('fonts/EBGaramond-ExtraBold.ttf');
-    font-weight: bolder;
+    font-family: PatrickHand;
+    src: url('fonts/PatrickHand-Regular.ttf');
+}
+@font-face {
+    font-family: Texturina;
+    src: url('fonts/Texturina.ttf');
 }

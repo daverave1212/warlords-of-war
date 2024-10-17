@@ -1,28 +1,109 @@
-EB Garamond Variable Font
-=========================
+Texturina Variable Font
+=======================
 
-This download contains EB Garamond as both variable fonts and static fonts.
+This download contains Texturina as both variable fonts and static fonts.
 
-EB Garamond is a variable font with this axis:
+Texturina is a variable font with these axes:
+  opsz
   wght
 
 This means all the styles are contained in these files:
-  EBGaramond-VariableFont_wght.ttf
-  EBGaramond-Italic-VariableFont_wght.ttf
+  Texturina-VariableFont_opsz,wght.ttf
+  Texturina-Italic-VariableFont_opsz,wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for EB Garamond:
-  static/EBGaramond-Regular.ttf
-  static/EBGaramond-Medium.ttf
-  static/EBGaramond-SemiBold.ttf
-  static/EBGaramond-Bold.ttf
-  static/EBGaramond-ExtraBold.ttf
-  static/EBGaramond-Italic.ttf
-  static/EBGaramond-MediumItalic.ttf
-  static/EBGaramond-SemiBoldItalic.ttf
-  static/EBGaramond-BoldItalic.ttf
-  static/EBGaramond-ExtraBoldItalic.ttf
+in those cases you can use the static font files for Texturina:
+  static/Texturina_14pt-Thin.ttf
+  static/Texturina_14pt-ExtraLight.ttf
+  static/Texturina_14pt-Light.ttf
+  static/Texturina_14pt-Regular.ttf
+  static/Texturina_14pt-Medium.ttf
+  static/Texturina_14pt-SemiBold.ttf
+  static/Texturina_14pt-Bold.ttf
+  static/Texturina_14pt-ExtraBold.ttf
+  static/Texturina_14pt-Black.ttf
+  static/Texturina_18pt-Thin.ttf
+  static/Texturina_18pt-ExtraLight.ttf
+  static/Texturina_18pt-Light.ttf
+  static/Texturina_18pt-Regular.ttf
+  static/Texturina_18pt-Medium.ttf
+  static/Texturina_18pt-SemiBold.ttf
+  static/Texturina_18pt-Bold.ttf
+  static/Texturina_18pt-ExtraBold.ttf
+  static/Texturina_18pt-Black.ttf
+  static/Texturina_28pt-Thin.ttf
+  static/Texturina_28pt-ExtraLight.ttf
+  static/Texturina_28pt-Light.ttf
+  static/Texturina_28pt-Regular.ttf
+  static/Texturina_28pt-Medium.ttf
+  static/Texturina_28pt-SemiBold.ttf
+  static/Texturina_28pt-Bold.ttf
+  static/Texturina_28pt-ExtraBold.ttf
+  static/Texturina_28pt-Black.ttf
+  static/Texturina_48pt-Thin.ttf
+  static/Texturina_48pt-ExtraLight.ttf
+  static/Texturina_48pt-Light.ttf
+  static/Texturina_48pt-Regular.ttf
+  static/Texturina_48pt-Medium.ttf
+  static/Texturina_48pt-SemiBold.ttf
+  static/Texturina_48pt-Bold.ttf
+  static/Texturina_48pt-ExtraBold.ttf
+  static/Texturina_48pt-Black.ttf
+  static/Texturina_60pt-Thin.ttf
+  static/Texturina_60pt-ExtraLight.ttf
+  static/Texturina_60pt-Light.ttf
+  static/Texturina_60pt-Regular.ttf
+  static/Texturina_60pt-Medium.ttf
+  static/Texturina_60pt-SemiBold.ttf
+  static/Texturina_60pt-Bold.ttf
+  static/Texturina_60pt-ExtraBold.ttf
+  static/Texturina_60pt-Black.ttf
+  static/Texturina_14pt-ThinItalic.ttf
+  static/Texturina_14pt-ExtraLightItalic.ttf
+  static/Texturina_14pt-LightItalic.ttf
+  static/Texturina_14pt-Italic.ttf
+  static/Texturina_14pt-MediumItalic.ttf
+  static/Texturina_14pt-SemiBoldItalic.ttf
+  static/Texturina_14pt-BoldItalic.ttf
+  static/Texturina_14pt-ExtraBoldItalic.ttf
+  static/Texturina_14pt-BlackItalic.ttf
+  static/Texturina_18pt-ThinItalic.ttf
+  static/Texturina_18pt-ExtraLightItalic.ttf
+  static/Texturina_18pt-LightItalic.ttf
+  static/Texturina_18pt-Italic.ttf
+  static/Texturina_18pt-MediumItalic.ttf
+  static/Texturina_18pt-SemiBoldItalic.ttf
+  static/Texturina_18pt-BoldItalic.ttf
+  static/Texturina_18pt-ExtraBoldItalic.ttf
+  static/Texturina_18pt-BlackItalic.ttf
+  static/Texturina_28pt-ThinItalic.ttf
+  static/Texturina_28pt-ExtraLightItalic.ttf
+  static/Texturina_28pt-LightItalic.ttf
+  static/Texturina_28pt-Italic.ttf
+  static/Texturina_28pt-MediumItalic.ttf
+  static/Texturina_28pt-SemiBoldItalic.ttf
+  static/Texturina_28pt-BoldItalic.ttf
+  static/Texturina_28pt-ExtraBoldItalic.ttf
+  static/Texturina_28pt-BlackItalic.ttf
+  static/Texturina_48pt-ThinItalic.ttf
+  static/Texturina_48pt-ExtraLightItalic.ttf
+  static/Texturina_48pt-LightItalic.ttf
+  static/Texturina_48pt-Italic.ttf
+  static/Texturina_48pt-MediumItalic.ttf
+  static/Texturina_48pt-SemiBoldItalic.ttf
+  static/Texturina_48pt-BoldItalic.ttf
+  static/Texturina_48pt-ExtraBoldItalic.ttf
+  static/Texturina_48pt-BlackItalic.ttf
+  static/Texturina_60pt-ThinItalic.ttf
+  static/Texturina_60pt-ExtraLightItalic.ttf
+  static/Texturina_60pt-LightItalic.ttf
+  static/Texturina_60pt-Italic.ttf
+  static/Texturina_60pt-MediumItalic.ttf
+  static/Texturina_60pt-SemiBoldItalic.ttf
+  static/Texturina_60pt-BoldItalic.ttf
+  static/Texturina_60pt-ExtraBoldItalic.ttf
+  static/Texturina_60pt-BlackItalic.ttf
 
 Get started
 -----------

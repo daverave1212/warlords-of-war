@@ -235,6 +235,8 @@ function saveCtxSettings(ctx, key) {
     ctxSettingsObject.font = ctx.font
     ctxSettingsObject.fillStyle = ctx.fillStyle
     ctxSettingsObject.globalAlpha = ctx.globalAlpha
+    ctxSettingsObject.stroke = ctx.stroke
+    ctxSettingsObject.lineWidth = ctx.lineWidth
     console.log(`Saved ctxSettings with key "${key}" as:`)
     console.log({ctxSettingsObject})
 }
@@ -288,19 +290,31 @@ function clearRect(canvas, x, y, width, height) {
     const ctx = canvas.getContext('2d')
     ctx.clearRect(x, y, width, height)
 }
-function drawText({canvas, font, x, y, text, textAlign='center', color}) {
+function drawText({canvas, font, x, y, text, textAlign='center', color, strokeColor, strokeSize, rotation}) {
     const ctx = canvas.getContext('2d')
-    saveCtxSettings(ctx)
+    ctx.save()
     if (color != null) {
         ctx.fillStyle = color
     }
     ctx.textAlign = textAlign
     ctx.font = font
+    if (strokeColor != null) {
+        ctx.strokeStyle = strokeColor
+    }
+    if (strokeSize != null) {
+        ctx.lineWidth = strokeSize
+    }
+    if (rotation != null) {
+        ctx.rotate(Math.PI / 180 * rotation)
+    }
+    if (strokeSize != null || strokeColor != null) {
+        ctx.strokeText(text, x, y);
+    }
     ctx.fillText(text, x, y)
-    loadCtxSettings(ctx)
+    ctx.restore()
 }
 
-function drawTextLines({canvas, font, x, y, width, text, lineHeight, textAlign='center', color, isCenteredY=true}) {
+function drawTextLines({canvas, font, x, y, width, text, lineHeight, textAlign='center', color, isCenteredY=true, strokeColor, strokeSize}) {
     const ctx = canvas.getContext('2d')
     saveCtxSettings(ctx, 'drawTextLines')
     ctx.font = font
@@ -312,7 +326,7 @@ function drawTextLines({canvas, font, x, y, width, text, lineHeight, textAlign='
     for (let i = 0; i < lines.length; i++) {
         const textLine = lines[i]
         const thisY = startY + i * lineHeight
-        drawText({canvas, font, x, y: thisY, text: textLine, textAlign, color})
+        drawText({canvas, font, x, y: thisY, text: textLine, textAlign, color, strokeColor, strokeSize})
     }
     loadCtxSettings(ctx, 'drawTextLines')
     return lines
