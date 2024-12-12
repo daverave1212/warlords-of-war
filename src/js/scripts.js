@@ -203,9 +203,24 @@ async function drawCardsForTTS(cards, isWarlord) {
 
 async function createCardsForTTS() {
     await drawCardsForTTS(Cards['Tier 1'])
+    await drawCardsForTTS(Cards['Tier 2'])
+    await drawCardsForTTS(Cards['Tier 3'])
+    await drawCardsForTTS(Warlords)
+    await drawCardsForTTS(WarlordCards)
+    
 }
 
-createCardsForTTS()
+async function createOnlyWarlords1CanvasEach() {
+    for (const card of Warlords) {
+        const canvas = document.createElement('canvas')
+        canvas.width = CARD_WIDTH
+        canvas.height = CARD_HEIGHT
+        await drawCard(canvas, card, 0, 0, true)
+        document.body.appendChild(canvas)
+    }
+}
+
+createOnlyWarlords1CanvasEach()
 
 async function createCardsForPrint() {
     let normalCards = [...Cards['Tier 1'], ...Cards['Tier 2'], ...Cards['Tier 3']]
@@ -219,3 +234,4 @@ async function createCardsForPrint() {
     await drawCards(WarlordCards)
     console.log(`Done. Made ${sheetsMade} sheets.`)
 }
+ 
