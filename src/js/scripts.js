@@ -220,7 +220,7 @@ async function createOnlyWarlords1CanvasEach() {
     }
 }
 
-createOnlyWarlords1CanvasEach()
+// createOnlyWarlords1CanvasEach()
 
 async function createCardsForPrint() {
     let normalCards = [...Cards['Tier 1'], ...Cards['Tier 2'], ...Cards['Tier 3']]
@@ -234,4 +234,5 @@ async function createCardsForPrint() {
     await drawCards(WarlordCards)
     console.log(`Done. Made ${sheetsMade} sheets.`)
 }
- 
+
+createCardsForPrint()
