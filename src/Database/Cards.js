@@ -1,5 +1,35 @@
 let Cards = {
-  "Tier 1": [
+  "Tier 1": [    
+        {
+          "Name": "Tree",
+          "Power": "3",
+          "Text": "Worth 2 Cardboard when spent from the Graveyard.",
+          "Type": "Tree...?"
+        },
+        {
+          "Name": "Mana Infuser",
+          "Power": "2",
+          "Text": "Your Warlord Ability costs 1 less. After you use it, this minion dies.",
+          "Type": "Undead"
+        },
+        {
+          "Name": "Deck of Many Stuffs",
+          "Power": 0.5,
+          "Text": "On draw phase, after you draw, you may Exile 1 card and draw another.",
+          "Type": "Other (Minion)"
+        },
+        {
+          "Name": "Dark Pickpocketer",
+          "Power": "1.5",
+          "Text": "Death: At the end of the round, pick an opponent. Choose and draw any card from their Graveyard.",
+          "Type": "Human"
+        },
+        {
+          "Name": "Dead Mage",
+          "Power": "0",
+          "Text": "Whenever you Reveal a Spell, give a minion (+2).",
+          "Type": "Undead"
+        },
         {
           "Name": "Growcoon",
           "Power": "0.5",
@@ -11,6 +41,12 @@ let Cards = {
           "Power": "1",
           "Text": "Every Turn Start: gain (+1)",
           "Type": "Demon"
+        },
+        {
+          "Name": "Broken Record Keeper",
+          "Power": "3",
+          "Text": "Reveal: Turn your Warlord back 1 or 2 edges (but not before the first edge unless you're on the second cycle).",
+          "Type": "Human"
         },
         {
           "Power": "1",
@@ -32,8 +68,8 @@ let Cards = {
         },
         {
           "Name": "Gold Digger",
-          "Power": "1.5",
-          "Text": "Reveal: next turn, you can play one extra card.",
+          "Power": "2.5",
+          "Text": "Death: Give an opponent any number of cards from your hand. They give you back the same number of other cards from theirs.",
           "Type": "Human"
         },
         {
@@ -45,7 +81,7 @@ let Cards = {
         {
           "Name": "Fisherman",
           "Power": "2",
-          "Text": "Reveal: draw a card.",
+          "Text": "Death: draw a card.",
           "Type": "Human"
         },
         {
@@ -75,7 +111,7 @@ let Cards = {
         {
           "Name": "Chomper",
           "Power": "2",
-          "Text": "During your turn, you can spend any number of Resources to gain (+1) for each spent.",
+          "Text": "During your turn, you can spend any number of Cardboard to gain (+1) for each spent.",
           "Type": "Demon"
         },
         {
@@ -93,7 +129,7 @@ let Cards = {
         {
           "Name": "Hasteful Imp",
           "Power": "2",
-          "Text": "Every Combat End: you may spend Resources to Level Up now, or to draw a Warlord Card (doesn't count to the turn limit).",
+          "Text": "Every Combat End: you may spend Cardboard to Level Up now, or to draw a Warlord Card (doesn't count to the turn limit).",
           "Type": "Demon"
         },
         {
@@ -105,7 +141,7 @@ let Cards = {
         {
           "Name": "Human Uncle",
           "Power": "2",
-          "Text": "Reveal: draft a Human from either the Tier 1 or Tier 2 deck.",
+          "Text": "Death: Look at 4 Tier 2 cards. Keep all Humans. Put the rest back in any order.",
           "Type": "Human"
         },
         {
@@ -123,7 +159,7 @@ let Cards = {
         {
           "Name": "Freshman Priest",
           "Power": "2.5",
-          "Text": "Reveal: get a (+1) token (you can't use it this turn)",
+          "Text": "When you use your Warlord Ability, give a minion (+1).",
           "Type": "Human"
         },
         {
@@ -140,8 +176,8 @@ let Cards = {
         },
         {
           "Name": "Expensive Mercenary",
-          "Power": "3",
-          "Text": "Free. Obvious. To play this, spend resources equal to (6 - your Points) (down to 0).",
+          "Power": "4",
+          "Text": "To play this, spend Cardboard equal to (7 - your Points) (down to 0).",
           "Type": "Human"
         },
         {
@@ -174,7 +210,7 @@ let Cards = {
         {
           "Name": "Soonglasses",
           "Type": "Spell",
-          "Text": "Free. Reveal: look at the top 3 cards of an available deck and exile 2 of them. Draw the other."
+          "Text": "Free. Reveal: look at the top 3 cards of an available deck and Exile 2 of them. Draw the other."
         },
         {
           "Name": "Command Order",
@@ -195,14 +231,61 @@ let Cards = {
           "Name": "Reverse Temperature",
           "Type": "Spell",
           "Text": "Free. Reveal: transform all debuffs into the equivalent buffs on your minions."
+        },
+        {
+          "Name": "Irresponsible Sponge",
+          "Power": "-1",
+          "Text": "Death: Double this minion's power and, if it's its first Death, put it on an empty space on another player's bottom row.",
+          "Type": "Faey"
         }
   ],
   "Tier 2": [
+        {
+          "Name": "Mumm",
+          "Power": 2,
+          "Text": "In combat only, has (+1) for every card in your Graveyard",
+          "Type": "Undead"
+        },
+        {
+          "Name": "Addictive Spores",
+          "Type": "Spell",
+          "Text": "Reveal: Transform a minion into a card 1 Tier higher (if possible). The previous minion is destroyed.",
+        },
+        {
+          "Name": "Unfair Huckery",
+          "Type": "Spell",
+          "Power": 1.5,
+          "Text": "Death: Return this to your hand.",
+        },
+        {
+          "Name": "Confused Poucher",
+          "Power": 2,
+          "Text": "Persistent. When you find out who your opponent is, draw a random card from their hand.",
+          "Type": "Faey"
+        },
+        {
+          "Name": "Gravedigger",
+          "Power": "3",
+          "Text": "Reveal: Trigger the Death effect of a friendly minion.",
+          "Type": "Undead"
+        },
         {
           "Name": "Crynivorous Plant",
           "Power": "2.5",
           "Text": "If this lane loses a battle, your next lane has (+3) this combat.",
           "Type": "Faey"
+        },
+        {
+          "Name": "Unicorn",
+          "Power": "2",
+          "Text": "Double all buffs/debuffs this minion gets.",
+          "Type": "Demon/Faey"
+        },
+        {
+          "Name": "Tom Iknowhatisawyer",
+          "Power": "3",
+          "Text": "Death: a chosen minion on a board triggers its Reveal effect for you.",
+          "Type": "Human"
         },
         {
           "Name": "Stick Bug",
@@ -230,15 +313,9 @@ let Cards = {
         },
         {
           "Name": "Pit Demon",
-          "Power": "3.5",
-          "Text": "Whenever you discard a gard (even when used as resource), gain (+2).",
+          "Power": "3",
+          "Text": "Whenever a card leaves your hand, gain (+1).",
           "Type": "Demon"
-        },
-        {
-          "Name": "Dead Mage",
-          "Power": "3.5",
-          "Text": "Whenever you Reveal a Spell, give a minion (+1).",
-          "Type": "Undead"
         },
         {
           "Name": "Anti-Necromancer",
@@ -285,7 +362,7 @@ let Cards = {
         {
           "Name": "Annoyed Cyclopian",
           "Power": "6",
-          "Text": "Has (-2) if there's another card on the same lane",
+          "Text": "Has (-2) if there's another minion on the same lane",
           "Type": "Demon"
         },
         {
@@ -303,8 +380,8 @@ let Cards = {
         {
           "Name": "Curse Blesser",
           "Power": "4",
-          "Type": "Undead",
-          "Text": "Reveal: Name a minion type. Draft one."
+          "Type": "Human/Undead",
+          "Text": "Death: Draw an Undead from your Graveyard."
         },
         {
           "Name": "Hand In The Dirt",
@@ -361,12 +438,12 @@ let Cards = {
         {
           "Name": "Bit of Gold",
           "Type": "Spell",
-          "Text": "Free. Gain 1 Point."
+          "Text": "Gain 1 Point. A player you choose loses 1 Point."
         },
         {
           "Name": "Warcry",
           "Type": "Spell",
-          "Text": "Free. Obvious. Pay 1 Resource to play an extra card this turn."
+          "Text": "Free. Obvious. Pay 1 Cardboard to play an extra card this turn."
         },
         {
           "Name": "Aura of Swords",
@@ -391,20 +468,66 @@ let Cards = {
         {
           "Name": "Divine-ish Shield",
           "Type": "Spell",
-          "Text": "Trigger. Prevent a friendly minion from being destroyed and freely play it back anywhere on your board face-up. It keeps buffs/debuffs."
+          "Text": "Free. Return a friendly minion to your hand."
         },
         {
           "Name": "Rocade",
           "Type": "Spell",
-          "Text": "Trigger. Play any time on turn start. Swap the cards from 2 of your lanes (with all buffs/debuffs)."
+          "Text": "Free. Swap 2 cards on your board (with all buffs/debuffs)."
         }
   ],
   "Tier 3": [
+      {
+        "Name": "Archangel",
+        "Power": 0,
+        "Text": "In combat only, show your opponent your cards in hand. This minion has extra power equal to the sum of your hand cards' Tiers.",
+        "Type": "Angel"
+      },
+      {
+        "Name": "Death Master",
+        "Power": "5",
+        "Text": "Your Death effects happen twice!",
+        "Type": "Undead"
+      },
+      {
+        "Name": "Custom Turntables",
+        "Text": "Reveal: Turn your Warlord on any side.",
+        "Type": "Spell"
+      },
+      {
+        "Name": "Eclipse",
+        "Text": "Persistent. Your Warlord Ability activates twice when used. Then destroy this card.",
+        "Type": "Spell"
+      },
       {
         "Name": "Gate Demon",
         "Power": "0",
         "Text": "In combat, tie this lane battle, and gain 1 Point. Then destroy this.",
         "Type": "Demon"
+      },
+      {
+        "Name": "Drip Elemental",
+        "Power": "6",
+        "Text": "If this wins the lane battle, the power difference is carried over to the next lane.",
+        "Type": "Faey"
+      },
+      {
+        "Name": "Neckromancer",
+        "Power": 5,
+        "Text": "Reveal: Spend 1 Cardboard to gain 1 Point and draw any card from your Graveyard.",
+        "Type": "Undead"
+      },
+      {
+        "Name": "Entity From Beyond",
+        "Power": "-20",
+        "Text": "In combat only, has (+1) for each Point you have.",
+        "Type": "Demon/Undead"
+      },
+      {
+        "Name": "Strawberrius the Cruel",
+        "Power": 4.5,
+        "Text": "Every Turn Start: Draw a Tier 1 Card. Attach it to this as extra Power!",
+        "Type": "Demon/Faey"
       },
       {
         "Name": "Pseudowarlord",
@@ -445,7 +568,7 @@ let Cards = {
       {
         "Name": "Desperate Digger",
         "Power": "5",
-        "Text": "Every Turn Start: you can spend 1 Resource to gain 1 Point.",
+        "Text": "Reveal and Death: Spend 1 Cardboard to gain 1 Point.",
         "Type": "Faey"
       },
       {
@@ -463,7 +586,7 @@ let Cards = {
       {
         "Name": "Hat Tricker",
         "Power": "5",
-        "Text": "Reveal: draft a minion of each type you don't have on board from the Exile pile (then shuffle the deck).",
+        "Text": "Death: Give all your minions (+1).",
         "Type": "Faey"
       },
       {
@@ -540,8 +663,8 @@ let Cards = {
       },
       {
         "Name": "Curse Ettin",
-        "Power": "6.5",
-        "Text": "Reveal: all other players give one of their minions (-1).",
+        "Power": "6",
+        "Text": "Death: give a minion of each other player (-2).",
         "Type": "Demon"
       },
       {
@@ -604,422 +727,370 @@ const Warlords = [
       "Name": "Horace the Mad",
       "Text": "You skip Tier 2, but leveling to Tier 3 costs 1 more.",
       Color: "Blue",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
   {
-      Name: "Mercedesa the Seer",
-      Text: "Once per draw phase, look at 1 extra card. Exile it, or draw it and exile a different card you just drew.",
+      "Name": "Mercedesa the Seer",
+      "Text": "Once per draw phase, look at 1 extra card. Exile it, or draw it and Exile a different card you just drew.",
       Color: "Blue",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
 
 
   {
-      Name: "Po",
-      Text: "When you upgrade, draw a card from a Tier you were previously.",
+      "Name": "Po",
+      "Text": "When you upgrade, draw a card from a Tier you were previously.",
       Color: "Yellow",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
   {
-      Name: "Ser Arthur the Rich",
-      Text: "You have an obvious side shop that always has 3 available cards of your Tier. At any point, you can buy one of them with 1 resource.",
+      "Name": "Ser Arthur the Rich",
+      "Text": "You have an obvious side shop that always has 3 available cards of your Tier. At any point, you can buy one of them with 1 resource.",
       Color: "Yellow",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
 
 
   {
-      Name: "Albanzarterionus",
-      Text: "At any point, you may spend any number of Resources to give a minion (+1).",
+      "Name": "Albanzarterionus",
+      "Text": "At any point, you may spend any number of Cardboard to give a minion (+1).",
       Color: "Purple",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
   {
-      Name: "Lily and Mister G",
-      Text: "You start the game with 1 extra Tier 2 card in hand.",
+      "Name": "Lily and Mister G",
+      "Text": "You start the game with 1 extra Tier 2 card in hand.",
       Color: "Purple",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
 
   {
-      Name: "Sssssliver",
-      Text: "On draw phase, if you have the most points (even if tied), draw a Tier 1 card.",
+      "Name": "Sssssliver",
+      "Text": "On draw phase, if you have the most points (even if tied), draw a Tier 1 card.",
       Color: "Green",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
   {
-      Name: "Stinky Steve",
-      Text: "You start with a (+1) token. When Level Up to Level 2, replace this with a random unused Warlord (but keep the Warlord deck).",
+      "Name": "Stinky Steve",
+      "Text": "You start with a (+1) token. When Level Up to Level 2, replace this with a random unused Warlord (but keep the Warlord deck).",
       Color: "Green",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
 
   {
-      Name: "xXNoobSlayer69Xx",
-      Text: "When you Upgrade, gain 1 Point.",
+      "Name": "xXNoobSlayer69Xx",
+      "Text": "When you Upgrade, gain 1 Point.",
       Color: "Teal",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
   {
-      Name: "Sean the Scammer",
-      Text: "You start with -1 Point. Every Turn End: If you have 0 cards in hand, draw 1 card.",
+      "Name": "Sean the Scammer",
+      "Text": "You start with -1 Point. Every Turn End: If you have 0 cards in hand, draw 1 card.",
       Color: "Teal",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
 
   {
-      Name: "Patrocles the Pointer",
-      Text: "If you end the game on Tier 2, gain 2 Points.",
+      "Name": "Patrocles the Pointer",
+      "Text": "If you end the game on Tier 2, gain 2 Points.",
       Color: "Brown",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
   {
-      Name: "Hopus the Never Ending",
-      Text: "You start the game with 1 Point and 1 random Tier 1 card in your Graveyard.",
+      "Name": "Hopus the Never Ending",
+      "Text": "You start the game with 1 Point and 1 random Tier 1 card in your Graveyard.",
       Color: "Brown",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
 
   {
-      Name: "Susan",
-      Text: "You start the game with 2 extra Tier 1 cards in hand.",
+      "Name": "Susan",
+      "Text": "You start the game with 2 extra Tier 1 cards in hand.",
       Color: "Red",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   },
   {
-      Name: "OROBORUS THE DESTROYER OF WORLDS",
-      Text: "Every Turn Start: if you lost 2 or more lanes last combat, give a minion (+1)",
+      "Name": "OROBORUS THE DESTROYER OF WORLDS",
+      "Text": "Every Turn Start: if you lost 2 or more lanes last combat, give a minion (+1)",
       Color: "Red",
-      Type: "WARLORD"
+      "Type": "WARLORD"
   }
 ]
 
 
 const WarlordCards = [
-    
   {
-    Name: "Skibidi Draw",
-    Tier: "T1",
-    Type: "Spell",
-    Text: "Free. Reveal: Draw a Tier 2 card.",
+    "Name": "FIRE BALL",
+    "Type": "Spell",
+    "Power": 8,
     Color: "Blue"
   },
   {
-    Name: "Hocus Pocus",
-    Tier: "T2",
-    Type: "Spell",
-    Text: "Free. Reveal: you can pick your opponent this battle (next 2 battles if doubled).",
-    Color: "Blue"
+    "Name": "Poop Elemental",
+    "Text": "When you spend Cardboard, one hand card may go to the Graveyard instead of being Exiled.",
+    "Power": "1.5",
+    "Color": "Pink",
+    "Type": "Faey"
   },
   {
-    Name: "Skiddadle Skidoodle",
-    Tier: "T3",
-    Type: "Spell",
-    Text: "Reveal: Your next Revealed Spell casts twice if possible (or has double power).",
-    Color: "Blue"
+    "Name": "Cardboard Elemental",
+    "Text": "Reveal: Draw 1 card of each Tier.",
+    "Power": "2",
+    "Color": "Pink",
+    "Type": "Faey"
   },
   {
-    Name: "FIRE BALL",
-    Tier: "T4",
-    Type: "Spell",
-    Power: 8,
-    Color: "Blue"
+    "Name": "Corpse Elemental",
+    "Text": "Gains (+1) whenever a card enters your Graveyard.",
+    "Power": "3",
+    "Color": "Pink",
+    "Type": "Faey/Undead"
   },
   {
-    Name: "Drip Elemental",
-    Tier: "T5",
-    Power: 7,
-    Text: "If this wins the lane battle, the power difference is carried over to the next lane.",
-    Color: "Blue",
-    Type: "Faey"
+    "Name": "Hemp Elemental",
+    "Text": "Death: Give a Faey (+1) for each card in either your hand or your Graveyard.",
+    "Power": "3",
+    "Color": "Pink",
+    "Type": "Faey"
   },
   {
-    Name: "Abracadavera",
-    Tier: "T6",
-    Type: "Spell",
-    Text: "Free. Reveal: Draw any Spell from the Graveyard, or from the Exile pile, twice.",
-    Color: "Blue"
-  },
-
-  {
-    Name: "Greedy Goon",
-    Tier: "T1",
-    Power: 3,
-    Text: "Every Turn Start: discard any number of cards. Gain (+1) for each card discarded.",
-    Color: "Yellow",
-    Type: "Demon"
+    "Name": "Meat Elemental",
+    "Text": "When this enters the board, a friendly minion gains Power equal to one of its neighbors'. Then destroy that neighbor.",
+    "Power": "5",
+    "Color": "Pink",
+    "Type": "Faey/Demon"
   },
   {
-    Name: "Spiked Coffee",
-    Tier: "T2",
-    Type: "Spell",
-    Text: "After Reveal: You and the winning player (you choose who if tied) choose a card on the board to swap. Buffs disappear. Each plays it anywhere on their board.",
-    Color: "Yellow"
-  },
-  {
-    Name: "Successful Alchemist",
-    Tier: "T3",
-    Power: 4.5,
-    Text: "Reveal: Draw 4 Tier 1 cards.",
-    Color: "Yellow",
-    Type: "Human"
-  },
-  {
-    Name: "Brass Golem",
-    Tier: "T4",
-    Power: 6,
-    Text: "When destroyed, once, freely play this minion again on the back row on the same lane, face up.",
-    Color: "Yellow"
-  },
-  {
-    Name: "Mumm",
-    Tier: "T5",
-    Power: 4,
-    Text: "In combat only, has (+1) for every card in your Graveyard",
-    Color: "Yellow",
-    Type: "Undead"
-  },
-  {
-    Name: "Archangel",
-    Tier: "T6",
-    Power: 0,
-    Text: "In combat only, show your opponent your cards in hand. This minion has extra power equal to the sum of your hand cards' power.",
-    Color: "Yellow"
-  },
-
-  {
-    Name: "Santa Corpse",
-    Tier: "T1",
-    Power: 3,
-    Text: "Reveal: Next combat, if you win at least one lane battle, add the top Tier 2 deck card to your Graveyard.",
+    "Name": "Black Mage",
+    "Power": 1,
+    "Text": "Whenever you draw a card, gain (+1).",
     Color: "Purple",
-    Type: "Undead"
+    "Type": "Human"
   },
   {
-    Name: "Evil Yoinker",
+    "Name": "Milky Dragon",
+    "Power": 0,
+    "Text": "Every Turn End: Gain (+1) for each different minion type on your board.",
+    Color: "White",
+    "Type": "Dragon"
+  },
+
+
+
+  {
+    "Name": "Skibidi Draw",
+    Tier: "T1",
+    "Type": "Spell",
+    "Text": "Free. Reveal: Draw a Tier 2 card.",
+    Color: "Blue"
+  },
+  {
+    "Name": "Hocus Pocus",
     Tier: "T2",
-    Power: 3,
-    Text: "Reveal: choose a card from your graveyard and draw it.",
+    "Type": "Spell",
+    "Text": "Free. Reveal: you can pick your opponent this battle (next 2 battles if doubled).",
+    Color: "Blue"
+  },
+  {
+    "Name": "Skiddadle Skidoodle",
+    Tier: "T3",
+    "Type": "Spell",
+    "Text": "Reveal: Your next Revealed Spell casts twice if possible (or has double power).",
+    Color: "Blue"
+  },
+  {
+    "Name": "Abracadavera",
+    Tier: "T6",
+    "Type": "Spell",
+    "Text": "Free. Reveal: Draw any Spell from the Graveyard, or from the Exile pile, twice.",
+    Color: "Blue"
+  },
+
+  {
+    "Name": "Greedy Goon",
+    Tier: "T1",
+    "Power": 3,
+    "Text": "Every Turn Start: discard any number of cards. Gain (+1) for each card discarded.",
+    Color: "Yellow",
+    "Type": "Demon"
+  },
+  {
+    "Name": "Spiked Coffee",
+    Tier: "T2",
+    "Type": "Spell",
+    "Text": "After Reveal: You and the winning player (you choose who if tied) choose a card on the board to swap. Buffs disappear. Each plays it anywhere on their board.",
+    Color: "Yellow"
+  },
+  {
+    "Name": "Successful Alchemist",
+    Tier: "T3",
+    "Power": 4.5,
+    "Text": "Reveal: Draw 4 Tier 1 cards.",
+    Color: "Yellow",
+    "Type": "Human"
+  },
+  {
+    "Name": "Brass Golem",
+    Tier: "T4",
+    "Power": 6,
+    "Text": "When destroyed, once, freely play this minion again on the back row on the same lane, face up.",
+    Color: "Yellow"
+  },
+  {
+    "Name": "Santa Corpse",
+    Tier: "T1",
+    "Power": 3,
+    "Text": "Reveal: Next combat, if you win at least one lane battle, add the top Tier 2 deck card to your Graveyard.",
+    Color: "Purple",
+    "Type": "Undead"
+  },
+  {
+    "Name": "Evil Yoinker",
+    Tier: "T2",
+    "Power": 3,
+    "Text": "Reveal: choose a card from your graveyard and draw it.",
     Color: "Purple"
   },
+
   {
-    Name: "Black Mage",
-    Tier: "T3",
-    Power: 1,
-    Text: "Whenever you draw a card, gain (+1).",
-    Color: "Purple",
-    Type: "Human"
-  },
-  {
-    Name: "Shadow Mastermind",
+    "Name": "Shadow Mastermind",
     Tier: "T4",
-    Power: 5,
-    Text: "Reveal: Trigger all Reveal effects from your Graveyard.",
+    "Power": 5,
+    "Text": "Reveal: Trigger all Reveal effects from your Graveyard.",
     Color: "Purple",
-    Type: "Human"
+    "Type": "Human"
   },
   {
-    Name: "Lean Elemental",
+    "Name": "Lean Elemental",
     Tier: "T5",
-    Power: 7,
+    "Power": 7,
     Color: "Purple",
-    Type: "Faey"
+    "Type": "Faey"
   },
   {
-    Name: "Omen",
+    "Name": "Omen",
     Tier: "T6",
-    Power: 6,
-    Text: "Reveal: Each player (including you) discards a card. Gain power equal to the most powerful discarded card's power.",
+    "Power": 6,
+    "Text": "Reveal: Each player (including you) discards a card. Gain power equal to the most powerful discarded card's power.",
     Color: "Purple",
-    Type: "Demon"
+    "Type": "Demon"
   },
 
   {
-    Name: "Pinnacle of Innovation",
+    "Name": "Pinnacle of Innovation",
     Tier: "T1",
-    Power: 3,
-    Text: "Upgrading costs 1 less Resource.",
+    "Power": 3,
+    "Text": "Upgrading costs 1 less Cardboard.",
     Color: "Green"
   },
   {
-    Name: "Addictive Spores",
-    Tier: "T2",
-    Type: "Spell",
-    Text: "Reveal: Transform a minion into a Drafted minion 1 Tier higher (if possible). The previous minion is destroyed.",
-    Color: "Green"
-  },
-  {
-    Name: "Mirror Mirror on the Wall",
+    "Name": "Mirror Mirror on the Wall",
     Tier: "T3",
-    Power: 4,
-    Text: "After slide up: Draft a copy of a minion you have (if you can find it).",
+    "Power": 4,
+    "Text": "After slide up: Draft a copy of a minion you have (if you can find it).",
     Color: "Green",
-    Type: "Demon"
+    "Type": "Demon"
   },
   {
-    Name: "The Horde",
+    "Name": "The Horde",
     Tier: "T4",
-    Power: 3,
-    Text: "Every Turn Start: draw a Tier 1 card and freely play it face down.",
+    "Power": 3,
+    "Text": "Every Turn Start: draw a Tier 1 card and freely play it face down.",
     Color: "Green",
-    Type: "Faey"
+    "Type": "Faey"
   },
   {
-    Name: "Sawrus",
-    Type: "Faey",
+    "Name": "Sawrus",
+    "Type": "Faey",
     Tier: "T5",
-    Power: 4,
-    Text: "Reveal: Draft a Tier 2 Minion. Show it. Gain Power equal to its Power.",
+    "Power": 4,
+    "Text": "Reveal: Draft a Tier 2 Minion. Show it. Gain Power equal to its Power.",
     Color: "Green"
   },
   {
-    Name: "Bridgette",
+    "Name": "Bridgette",
     Tier: "T6",
-    Power: 10,
-    Type: "Faey",
+    "Power": 10,
+    "Type": "Faey",
     Color: "Green"
   },
 
   {
-    Name: "The Incredible Bulk",
+    "Name": "The Incredible Bulk",
     Tier: "T1",
-    Power: 4,
+    "Power": 4,
     Color: "Teal",
-    Type: "Demon"
+    "Type": "Demon"
   },
   {
-    Name: "Unfair Huckery",
-    Tier: "T2",
-    Type: "Spell",
-    Power: 2,
-    Text: "When burned, return this to your hand.",
+    "Name": "Gate Door",
+    Tier: "T3",
+    "Power": 2,
+    "Text": "You can play one extra card on your Turn (but not on the turn this is revealed).",
+    Color: "Teal",
+    "Type": "Faey"
+  },
+  {
+    "Name": "ARENA OF DEATH",
+    Tier: "T5",
+    "Type": "Spell",
+    "Text": "Reveal: Choose a lane number. All players destroy all cards in that lane.",
     Color: "Teal"
   },
   {
-    Name: "Gate Door",
-    Tier: "T3",
-    Power: 2,
-    Text: "You can play one extra card on your Turn (but not on the turn this is revealed).",
+    "Name": "Master of Disguise",
+    Tier: "T6",
+    "Power": 6,
+    "Text": "Reveal: give this minion buffs to equal the most powerful minion on any board (including buffs) (that was not revealed this round).",
     Color: "Teal",
-    Type: "Faey"
-  },
-  {
-    Name: "Deck of Many Stuffs",
-    Tier: "T4",
-    Power: 5,
-    Text: "On draw phase, after you draw, you may discard a card and draw another.",
-    Color: "Teal"
-  },
-  {
-    Name: "ARENA OF DEATH",
-    Tier: "T5",
-    Type: "Spell",
-    Text: "Reveal: Choose a lane number. All players destroy all cards in that lane.",
-    Color: "Teal"
-  },
-  {
-    Name: "Master of Disguise",
-    Tier: "T6",
-    Power: 6,
-    Text: "Reveal: give this minion buffs to equal the most powerful minion on any board (including buffs) (that was not revealed this round).",
-    Color: "Teal",
-    Type: "Human"
+    "Type": "Human"
   },
 
   {
-    Name: "Party Pooper",
+    "Name": "Party Pooper",
     Tier: "T1",
-    Power: 2,
-    Text: "Free. Reveal: Each other player loses 1 Point.",
+    "Power": 2,
+    "Text": "Free. Reveal: Each other player loses 1 Point.",
     Color: "Brown",
-    Type: "Faey"
+    "Type": "Faey"
   },
   {
-    Name: "Confused Poucher",
-    Tier: "T2",
-    Power: 2,
-    Text: "Persistent. Reveal: When you find out who your next opponent is, draw the top card from their Warlord deck.",
-    Color: "Brown",
-    Type: "Faey"
-  },
-  {
-    Name: "Polite Deader",
+    "Name": "Polite Deader",
     Tier: "T3",
-    Power: 5,
-    Text: "Reveal: destroy the minion to the left of this and gain its current stats and buffs.",
+    "Power": 5,
+    "Text": "Reveal: destroy the minion to the left of this and gain its current stats and buffs.",
     Color: "Brown",
-    Type: "Undead"
-  },
-  {
-    Name: "Tom Iknowhatisawyer",
-    Tier: "T4",
-    Power: 3,
-    Text: "Death: a chosen minion triggers its reveal effect.",
-    Color: "Brown",
-    Type: "Human"
-  },
-  {
-    Name: "Neckromancer",
-    Tier: "T5",
-    Power: 5,
-    Text: "Reveal: Spend 1 resource to gain 1 Point and draw any card from your Graveyard.",
-    Color: "Brown",
-    Type: "Undead"
-  },
-  {
-    Name: "Entity From Beyond",
-    Tier: "T6",
-    Power: 0,
-    Text: "In combat only, has (+1) for each Point you have.",
-    Color: "Brown",
-    Type: "Demon"
+    "Type": "Undead"
   },
 
   {
-    Name: "Tik-Tokker",
+    "Name": "Tik-Tokker",
     Tier: "T1",
-    Type: "Spell",
-    Text: "Free. Reveal: prolong the game length total by 1 round. Draw 1 card.",
+    "Type": "Spell",
+    "Text": "Free. Reveal: prolong the game length total by 1 round. Draw 1 card.",
     Color: "Red"
   },
   {
-    Name: "Opium",
+    "Name": "Opium",
     Tier: "T2",
-    Type: "Spell",
-    Text: "Reveal: Give (+1) 3 times, distributed among your minions as you like.",
+    "Type": "Spell",
+    "Text": "Reveal: Give (+1) 3 times, distributed among your minions as you like.",
     Color: "Red"
   },
   {
-    Name: "Leave If You Can",
+    "Name": "Leave If You Can",
     Tier: "T3",
-    Type: "Spell",
-    Text: "Free. Obvious. Death: Aura: once per turn, on slide-up, you can choose to not slide a minion up.",
+    "Type": "Spell",
+    "Text": "Free. Obvious. Death: Aura: once per turn, on slide-up, you can choose to not slide a minion up.",
     Color: "Red"
   },
   {
-    Name: "Unicorn",
-    Tier: "T4",
-    Power: 1.5,
-    Text: "Double all buffs/debuffs this minion gets.",
-    Color: "Red",
-    Type: "Faey"
-  },
-  {
-    Name: "Wand of Amnesia",
+    "Name": "Wand of Amnesia",
     Tier: "T5",
-    Type: "Spell",
-    Text: "Free. Reveal: all other players must  to return from their board to their hand (minions lose buffs). Face down cards don't activate if returned to hand.",
+    "Type": "Spell",
+    "Text": "Free. Reveal: all other players mustreturn from their board to their hand (minions lose buffs). Face down cards don't activate if returned to hand.",
     Color: "Red"
   },
-  {
-    Name: "Strawberrius the Cruel",
-    Tier: "T6",
-    Power: 6.5,
-    Text: "Every turn start: Draft a Tier 1 Minion. Attach it to this.",
-    Color: "Red",
-    Type: "Faey"
-  }
-
 
 ]
 
@@ -1029,7 +1100,15 @@ const WarlordCards = [
 
 
 
+/*
+NEW:
+- Tree
 
+TODO:
+- Make ways to get more cards in hand
+
+
+*/
 
 
 

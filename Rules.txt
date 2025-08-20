@@ -1,3 +1,84 @@
+~~~~~~~~~~~~~~~ New Rules ~~~~~~~~~~~~~~~
+
+    .~ Gather Buckets of Blood ~.
+Each player starts with X buckets of blood.
+First player to reach X + nPlayers buckets of blood wins.
+For every lane you win, steal 1 bucket of blood.
+
+    .~ Turn Order ~.
+If there needs to be a turn order, players with most Buckets of Blood (tiebreaker by warlord Value) go first.
+
+=== What we need ===
+More economy, honestly.
+More powerful level 1 faey/undead
+Some ways to cheat out level 3's from level 2
+Menagerie mug that's +2 on level 2
+
+    .~ Removed Cards ~.
+- Reverse Temperature (I)
+- Mindridder (I)
+- Command Order (I)
+- Soonglasses (I)
+- Expensive Mercenary (I)
+- Stealthy Clopper (I)
+- Forced Reincarnation (I)
+- Divine-ish Shield (II)
+- Rocade (II)
+- Finger Training (II)
+- Rain Dance (II)
+- Philosopher (II)
+- Stick Bug (II)
+- Magnetic Boots (II)
+
+    .~ Maybe Removed ~.
+- Dead Skeleton (I)
+- Bit of Gold (II)
+- Neckromancer
+- Desperate Digger (III)
+- Knight
+
+    .~ Changed Cards ~.
+- Mana Infuser (reprint)
+- Shoulder Frog
+- Gray Knight (reprint)
+- Anti-Necromancer (reprint)
+- Hand in the Dirt
+- Grass Golem (neft + reword)
+- Cloudsmoker
+- Carefree Fertilizer
+- Witch Hunter (buff)
+- Strawberrius the Cruel (nerf)
+- Bard (buff)
+- Overgrown Carnie (boring)
+- Warlock (buff)
+- Hoarder Drake (nerf)
+- Curse Ettin (buff and rework to target)
+- Entity from Beyond
+- Face Sucker
+- Archangel (nerf)
+- Living Well (nerf power)
+
+    .~ Manual Changes ~.
+- Charismatic Ogre (remove "except this turn")
+- Juggler (remove the but)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Rules:

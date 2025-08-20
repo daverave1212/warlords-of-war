@@ -237,8 +237,6 @@ function saveCtxSettings(ctx, key) {
     ctxSettingsObject.globalAlpha = ctx.globalAlpha
     ctxSettingsObject.stroke = ctx.stroke
     ctxSettingsObject.lineWidth = ctx.lineWidth
-    console.log(`Saved ctxSettings with key "${key}" as:`)
-    console.log({ctxSettingsObject})
 }
 function loadCtxSettings(ctx, key) {
     const ctxSettingsObject = key == null? ctxSettings['default'] : ctxSettings[key]
@@ -319,8 +317,6 @@ function drawTextLines({canvas, font, x, y, width, text, lineHeight, textAlign='
     saveCtxSettings(ctx, 'drawTextLines')
     ctx.font = font
     const lines = getLines(ctx, text, width)
-    console.log(`Got lines as`)
-    console.log({lines})
     const totalHeight = lines.length * lineHeight
     const startY = isCenteredY ? y - totalHeight / 2 : y
     for (let i = 0; i < lines.length; i++) {

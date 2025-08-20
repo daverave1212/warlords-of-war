@@ -10,14 +10,14 @@ const colorToRGB = {
     'Purple': '#a45ef4',
     'Red': '#ff3e3e',
     'Teal': '#52e3d7',
-    'Yellow': '#fea425'
+    'Yellow': '#fea425',
+    'Pink': '#F56FFF',
+    'White': '#FFFFE7'
 }
 
 async function drawCard(canvas, card, x, y, isWarlord=false) {
     const { Name, Power, Text, Type, Tier, Color } = card
 
-    console.log('Drwing ' + Name)
-    console.log({card})
     await drawImageOnCanvasAsync(canvas, `res/Cards/${Name}.png`, x, y, CARD_WIDTH, CARD_WIDTH)
     await drawImageOnCanvasAsync(canvas, 'res/Frame.png', x, y, CARD_WIDTH, CARD_HEIGHT)
 
@@ -37,7 +37,7 @@ async function drawCard(canvas, card, x, y, isWarlord=false) {
     })
 
     if (Power != null) {
-        const isBig = parseInt(Power) == parseFloat(Power)
+        const isBig = parseInt(Power) == parseFloat(Power) && parseFloat(Power) >= 0
         const powerSize = isBig? '135px' : '100px'
         const powerX = isBig? 90 : 90
         const powerY = isBig? 130 : 125
@@ -86,7 +86,6 @@ async function drawCard(canvas, card, x, y, isWarlord=false) {
     }
 
     if (Text != null) {
-        console.log(Text)
         const lines = drawTextLines({
             canvas,
             font: '41px PatrickHand',
@@ -119,12 +118,10 @@ async function drawCard(canvas, card, x, y, isWarlord=false) {
         'On slide up:': 'Slide'
     }
     for (const possibleBadge of Object.keys(possibleBadges)) {
-        console.log({possibleBadge})
         if (Text != null && Text.includes(possibleBadge)) {
             badges.push(possibleBadges[possibleBadge])
         }
     }
-    console.log('Done')
 
     const badgeX = x + CARD_WIDTH - 145
     let badgeY = y + 26
@@ -136,28 +133,90 @@ async function drawCard(canvas, card, x, y, isWarlord=false) {
     await drawImageOnCanvasAsync(canvas, 'res/Border.png', x, y, CARD_WIDTH, CARD_HEIGHT)
     
     
-    if (Type != null) {
-        // const tribeWidth = 162
-        // const tribeHeight = 42
+    function getTribeTextColor(Type) {
         const tribeColor =
-            Type == 'Spell'? 'orange' :
-            Type == 'Human'? 'rgb(77, 150, 255)' :
-            Type == 'Undead'? 'rgb(255, 0, 255)' :
-            Type == 'Demon'? 'rgb(256, 77, 44)' :
-            Type == 'Faey'? 'rgb(0, 255, 125)' :
-            Color != null? colorToRGB[Color] :
+            Type == null? 'white':
+            Type.includes('Spell')? 'orange' :
+            Type.includes('Human')? 'rgb(77, 150, 255)' :
+            Type.includes('Undead')? 'rgb(255, 0, 255)' :
+            Type.includes('Demon')? 'rgb(256, 77, 44)' :
+            Type.includes('Faey')? 'rgb(0, 255, 125)' :
+            Type.includes('Dragon')? 'rgb(105, 255, 230)' :
+            Type.includes('Angel')? 'rgb(255, 233, 69)' :
+            Color != null && colorToRGB[Color] != null? colorToRGB[Color] :
             'white'
-        await drawText({
-            canvas,
-            font: `48px PatrickHand`,
-            text: `${Type}`,
-            x: x + CARD_WIDTH / 2,
-            y: y + CARD_HEIGHT - 15,
-            textAlign: 'center',
-            color: tribeColor,
-            strokeColor: 'rgb(0, 0, 0)',
-            strokeSize: 12
-        })
+        return tribeColor
+    }
+    if (Type != null) {
+
+        const tribeX = x + CARD_WIDTH / 2
+        const tribeY = y + CARD_HEIGHT - 15
+        const tribeFont = `48px PatrickHand`
+
+
+        if (Type.includes('/')) {
+            let isDebug = false
+            if (Type == 'Demon/Undead') {
+                isDebug = true
+            }
+            let [tribe1, tribe2] = Type.split('/')
+            const tribe1Size = getTextWidth(tribeFont, tribe1)
+            const slashSize = getTextWidth(tribeFont, '/')
+            const tribe2Size = getTextWidth(tribeFont, tribe2)
+
+            if (Type == 'Demon/Undead') {
+                console.log({tribe1Size})
+            }
+            
+            const tribe1X = tribeX - slashSize / 2 - tribe1Size
+            const tribe2X = tribeX + slashSize / 2
+
+            await drawText({
+                canvas,
+                font: tribeFont,
+                text: tribe1,
+                x: tribe1X,
+                y: tribeY,
+                textAlign: 'left',
+                color: getTribeTextColor(tribe1),
+                strokeColor: 'rgb(0, 0, 0)',
+                strokeSize: 12
+            })
+            await drawText({
+                canvas,
+                font: tribeFont,
+                text: '/',
+                x: tribeX,
+                y: tribeY,
+                textAlign: 'center',
+                color: 'white',
+                strokeColor: 'rgb(0, 0, 0)',
+                strokeSize: 12
+            })
+            await drawText({
+                canvas,
+                font: tribeFont,
+                text: tribe2,
+                x: tribe2X,
+                y: tribeY,
+                textAlign: 'left',
+                color: getTribeTextColor(tribe2),
+                strokeColor: 'rgb(0, 0, 0)',
+                strokeSize: 12
+            })
+        } else {
+            await drawText({
+                canvas,
+                font: tribeFont,
+                text: `${Type}`,
+                x: tribeX,
+                y: tribeY,
+                textAlign: 'center',
+                color: getTribeTextColor(Type),
+                strokeColor: 'rgb(0, 0, 0)',
+                strokeSize: 12
+            })
+        }
     }
 }
 
@@ -220,9 +279,37 @@ async function createOnlyWarlords1CanvasEach() {
     }
 }
 
+function analytics() {
+    function analyze(text, cards) {
+        for (const card of cards) {
+            if (card.Type == null) {
+                console.error(`Card ${card.Name} has no Type`)
+            }
+        }
+        console.log(`${text}: ${cards.length}`)
+        console.log(`  Of which: Spells(${
+            cards.filter(card => card.Type.includes('Spell')).length
+        }) Human(${
+            cards.filter(card => card.Type.includes('Human')).length
+        }) Faey(${
+            cards.filter(card => card.Type.includes('Faey')).length
+        }) Undead(${
+            cards.filter(card => card.Type.includes('Undead')).length
+        }) Demon(${
+            cards.filter(card => card.Type.includes('Demon')).length
+        })`)
+        console.log(`  Reveals: ${cards.filter(card => card.Text?.includes('Reveal:')).length}`)
+        console.log(`  Deaths: ${cards.filter(card => card.Text?.includes('Death:')).length}`)
+    }
+    console.log({Cards})
+    analyze("Tier 1", Cards["Tier 1"])
+    analyze("Tier 2", Cards["Tier 2"])
+    analyze("Tier 3", Cards["Tier 3"])
+}
+
 // createOnlyWarlords1CanvasEach()
 
-async function createCardsForPrint() {
+async function createAllCardsForPrint() {
     let normalCards = [...Cards['Tier 1'], ...Cards['Tier 2'], ...Cards['Tier 3']]
     let cardsTwice = []
     for (let i = 0; i < normalCards.length; i++) {
@@ -235,4 +322,75 @@ async function createCardsForPrint() {
     console.log(`Done. Made ${sheetsMade} sheets.`)
 }
 
-createCardsForPrint()
+function doubleArray(cardNames) {
+    let cardsTwice = []
+    for (let i = 0; i < cardNames.length; i++) {
+        cardsTwice[i * 2] = cardNames[i]
+        cardsTwice[i * 2 + 1] = cardNames[i]
+    }
+    return cardsTwice
+}
+
+async function createCardsForPrint(doubleCardNames, singleCardNames) {
+    const allCards = [...Cards['Tier 1'], ...Cards['Tier 2'], ...Cards['Tier 3'], ...WarlordCards]
+    doubleCardNames = doubleArray(doubleCardNames)
+    const allCardNames = [...doubleCardNames, ...singleCardNames]
+    const cardsToPrint = allCardNames.map(name => {
+        const foundCard = allCards.find(card => card.Name == name)
+        if (foundCard == null) {
+            console.error(`Card ${name} not found.`)
+        }
+        return foundCard
+    })
+    await drawCards(cardsToPrint)
+    console.log(`Done. Made ${sheetsMade} sheets.`)
+}
+
+createCardsForPrint([
+    'Mumm',
+    'Tom Iknowhatisawyer',
+    'Unicorn',
+    'Drip Elemental',
+    'Neckromancer',
+    'Entity From Beyond',
+    'Strawberrius the Cruel',
+    "Archangel",
+    'Addictive Spores',
+    'Unfair Huckery',
+    "Deck of Many Stuffs",
+    'Confused Poucher',
+    "Dark Pickpocketer",
+
+    'Gold Digger',
+    'Fisherman',
+    'Human Uncle',
+    'Freshman Priest',
+    'Expensive Mercenary',
+    'Bit of Gold',
+    'Pit Demon',
+    'Dead Mage',
+    'Annoyed Cyclopian',
+    'Curse Blesser',
+    'Divine-ish Shield',
+    'Rocade',
+    'Curse Ettin',
+    'Hat Tricker',
+
+    'Irresponsible Sponge',
+    'Mana Infuser',
+    'Broken Record Keeper',
+    'Gravedigger',
+    'Custom Turntables',
+    'Eclipse'
+], [
+    'FIRE BALL',
+    'Poop Elemental',
+    'Cardboard Elemental',
+    'Corpse Elemental',
+    'Hemp Elemental',
+    'Meat Elemental',
+    'Black Mage',
+    'Milky Dragon'
+])
+
+analytics()
