@@ -302,9 +302,12 @@ function analytics() {
         console.log(`  Deaths: ${cards.filter(card => card.Text?.includes('Death:')).length}`)
     }
     console.log({Cards})
-    analyze("Tier 1", Cards["Tier 1"])
-    analyze("Tier 2", Cards["Tier 2"])
-    analyze("Tier 3", Cards["Tier 3"])
+
+    const onlyUsable = cards => cards.filter(c => c.removedInVersion == null)
+
+    analyze("Tier 1", onlyUsable(Cards["Tier 1"]))
+    analyze("Tier 2", onlyUsable(Cards["Tier 2"]))
+    analyze("Tier 3", onlyUsable(Cards["Tier 3"]))
 }
 
 // createOnlyWarlords1CanvasEach()
@@ -346,51 +349,26 @@ async function createCardsForPrint(doubleCardNames, singleCardNames) {
     console.log(`Done. Made ${sheetsMade} sheets.`)
 }
 
-createCardsForPrint([
-    'Mumm',
-    'Tom Iknowhatisawyer',
-    'Unicorn',
-    'Drip Elemental',
-    'Neckromancer',
-    'Entity From Beyond',
-    'Strawberrius the Cruel',
-    "Archangel",
-    'Addictive Spores',
-    'Unfair Huckery',
-    "Deck of Many Stuffs",
-    'Confused Poucher',
-    "Dark Pickpocketer",
+function sortCards(cards) {
+    const tierToNumber = {
+        'I': 1,
+        'II': 2,
+        'III': 3
+    }
+    return cards.sort((a, b) => {
+        const aComparer = tierToNumber[a.Tier] + a.Type + a.Name
+        const bComparer = tierToNumber[b.Tier] + b.Type + b.Name
+        return aComparer.localeCompare(bComparer)
+    })
+}
+Array.prototype.sortCards = function() {
+    return sortCards(this)
+}
 
-    'Gold Digger',
-    'Fisherman',
-    'Human Uncle',
-    'Freshman Priest',
-    'Expensive Mercenary',
-    'Bit of Gold',
-    'Pit Demon',
-    'Dead Mage',
-    'Annoyed Cyclopian',
-    'Curse Blesser',
-    'Divine-ish Shield',
-    'Rocade',
-    'Curse Ettin',
-    'Hat Tricker',
-
-    'Irresponsible Sponge',
-    'Mana Infuser',
-    'Broken Record Keeper',
-    'Gravedigger',
-    'Custom Turntables',
-    'Eclipse'
-], [
-    'FIRE BALL',
-    'Poop Elemental',
-    'Cardboard Elemental',
-    'Corpse Elemental',
-    'Hemp Elemental',
-    'Meat Elemental',
-    'Black Mage',
-    'Milky Dragon'
-])
+createCardsForPrint([], AllCards
+    .filter(c => c.changedInVersion == 3)
+    .sortCards()
+    .map(c => c.Name)
+)
 
 analytics()

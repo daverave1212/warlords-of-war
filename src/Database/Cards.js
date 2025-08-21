@@ -2,14 +2,17 @@ let Cards = {
   "Tier 1": [    
         {
           "Name": "Tree",
-          "Power": "3",
+          "Power": "2",
+          addedInVersion: 3,
           "Text": "Worth 2 Cardboard when spent from the Graveyard.",
           "Type": "Tree...?"
         },
         {
           "Name": "Mana Infuser",
           "Power": "2",
-          "Text": "Your Warlord Ability costs 1 less. After you use it, this minion dies.",
+          changedInVersion: 3,
+          // "Text": "Your Warlord Ability costs 1 less. After you use it, this minion dies.",
+          "Text": "Worth 2 Cardboard when spent from face-up on the Board.",
           "Type": "Undead"
         },
         {
@@ -17,6 +20,27 @@ let Cards = {
           "Power": 0.5,
           "Text": "On draw phase, after you draw, you may Exile 1 card and draw another.",
           "Type": "Other (Minion)"
+        },
+        {
+          "Name": "DEEEMONSSS",
+          addedInVersion: 3,
+          "Power": "-1",
+          "Text": "Persistent. When you reveal a Demon, draw 1 card. Destroy this when you reveal another Spell.",
+          "Type": "Spell"
+        },
+        {
+          "Name": "Lustful Cornian",
+          "Power": 0,
+          addedInVersion: 3,
+          "Text": "Whenever a card enters your hand, this minion gains (+1) Power.",
+          "Type": "Demon/Faey"
+        },
+        {
+          "Name": "Claysayer",
+          "Power": 2,
+          addedInVersion: 3,
+          "Text": "This counts as any standard available minion type you want (Human, Faey, etc).",
+          "Type": "Any"
         },
         {
           "Name": "Dark Pickpocketer",
@@ -117,36 +141,60 @@ let Cards = {
         {
           "Name": "Good Fairy",
           "Power": "2",
+          removedInVersion: 3,
           "Text": "The card below this has (+2) in combat only (if it has power only).",
           "Type": "Faey"
         },
         {
+          Name: "Faeyful Weapons",
+          addedInVersion: 3,
+          Text: "Persistent. Minions in this row have +1 (+2 if playing with 3 columns).",
+          Type: "Spell",
+        },
+        {
+          Name: "Book of Fiends",
+          addedInVersion: 3,
+          Text: "Reveal: give all your Undead and Demons (+1) Power, then draw a card.",
+          Type: "Spell",
+        },
+        {
           "Name": "Mindridder",
           "Power": "2",
+          removedInVersion: 3,
           "Text": "When another friendly minion dies, transfer half of its buffs (if positive) to another minion (rounded down).",
           "Type": "Undead"
         },
         {
           "Name": "Hasteful Imp",
           "Power": "2",
+          removedInVersion: 2,
           "Text": "Every Combat End: you may spend Cardboard to Level Up now, or to draw a Warlord Card (doesn't count to the turn limit).",
           "Type": "Demon"
         },
         {
           "Name": "Strong But Sleeping Druid",
           "Power": "2",
+          removedInVersion: 2,
           "Text": "You can play Spells on the Side Board (face down, as normal). They are burned at slide-up phase, even if persistent.",
           "Type": "Faey"
         },
         {
           "Name": "Human Uncle",
           "Power": "2",
+          removedInVersion: 3,
           "Text": "Death: Look at 4 Tier 2 cards. Keep all Humans. Put the rest back in any order.",
           "Type": "Human"
         },
         {
+          "Name": "I Want You",
+          addedInVersion: 3,
+          Text: "Reveal: Look at 4 Tier 2 cards. Keep all Humans. Exile the rest.",
+          Type: "Spell"
+        },
+        {
           "Name": "Stealthy Clopper",
           "Power": "2",
+          removedInVersion: 3,
           "Text": "Trigger: play when combat starts.",
           "Type": "Demon"
         },
@@ -165,7 +213,8 @@ let Cards = {
         {
           "Name": "Juggler",
           "Power": "2.5",
-          "Text": "Reveal: swap 2 minions on your board, but the positions keep buffs/debuffs.",
+          changedInVersion: 2,
+          "Text": "Reveal: swap 2 minions on your board. You can also swap their buffs if you want.",
           "Type": "Faey"
         },
         {
@@ -177,6 +226,7 @@ let Cards = {
         {
           "Name": "Expensive Mercenary",
           "Power": "4",
+          removedInVersion: 3,
           "Text": "To play this, spend Cardboard equal to (7 - your Points) (down to 0).",
           "Type": "Human"
         },
@@ -205,21 +255,25 @@ let Cards = {
         {
           "Name": "Finger Training",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Reveal: the above minions steals all buffs/debuffs from its neighbors (left and right if any)."
         },
         {
           "Name": "Soonglasses",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Free. Reveal: look at the top 3 cards of an available deck and Exile 2 of them. Draw the other."
         },
         {
           "Name": "Command Order",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Free. Trigger: play any time (but not directly in combat) to reorder your face-up minions."
         },
         {
           "Name": "Forced Reincarnation",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Free. Reveal: destroy one of your minions, then put it back in your hand."
         },
         {
@@ -230,6 +284,7 @@ let Cards = {
         {
           "Name": "Reverse Temperature",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Free. Reveal: transform all debuffs into the equivalent buffs on your minions."
         },
         {
@@ -291,6 +346,7 @@ let Cards = {
           "Name": "Stick Bug",
           "Power": "3",
           "Text": "Persistent",
+          removedInVersion: 3,
           "Type": "Faey"
         },
         {
@@ -320,7 +376,8 @@ let Cards = {
         {
           "Name": "Anti-Necromancer",
           "Power": "4",
-          "Text": "You can choose to destroy the below minion instead of sliding it up.",
+          changedInVersion: 3,
+          "Text": "Reveal: Choose any minion. Its effect no longer works, then it loses half of its buffs/debuffs.",
           "Type": "Undead"
         },
         {
@@ -350,6 +407,7 @@ let Cards = {
         {
           "Name": "Philosopher",
           "Power": "4.5",
+          removedInVersion: 3,
           "Text": "Every Turn Start: If you lost 2 or more lanes last combat, gain 1 Point.",
           "Type": "Human"
         },
@@ -385,39 +443,45 @@ let Cards = {
         },
         {
           "Name": "Hand In The Dirt",
-          "Power": "4.5",
+          "Power": "4",
+          changedInVersion: 3,
           "Type": "Undead",
-          "Text": "Death: Aura: After you reveal an Undead, give it (+1)"
+          "Text": "While this is in your Graveyard, whenever you reveal an Undead, give it (+1)."
         },
         {
           "Name": "Gray Knight",
-          "Power": "5",
+          "Power": "2",
+          changedInVersion: 3,
           "Type": "Undead",
-          "Text": "On slide up: Destroy a friendly card (even the one being slid over)."
+          "Text": "Reveal: choose any minion and steal ALL its buffs/debuffs."
         },
         {
           "Name": "Shoulder Frog",
           "Power": "2",
+          changedInVersion: 3,
           "Type": "Faey",
-          "Text": "Death: Attach to a friendly Faey. When it is destroyed, attach this to a different Faey."
+          "Text": "Death: This doesn't die, and attaches to a friendly Faey instead!"
         },
         {
           "Name": "Carefree Fertilizer",
-          "Power": "2",
+          "Power": "4",
+          changedInVersion: 3,
           "Type": "Faey",
-          "Text": "Death: Aura: Whenever a friendly Faey dies, give a minion (+1)."
+          "Text": "Whenever a friendly Faey dies, give a minion (+1)."
         },
         {
           "Name": "Grass Golem",
-          "Power": "2",
+          "Power": "1",
+          changedInVersion: 3,
           "Type": "Faey",
-          "Text": "Every Turn Start: Gain (+1) for each Faey on your board."
+          "Text": "Every Turn Start: Gain (+1) for each other Faey on your board."
         },
         {
           "Name": "Cloudsmoker",
           "Power": "3",
+          changedInVersion: 3,
           "Type": "Undead",
-          "Text": "Death: Give this lane (+1) permanently, no matter what cards are on it."
+          "Text": "Death: Give a friendly Undead Power equal to the number of cards in your Graveyard."
         },
         {
           "Name": "Abusive Summoner",
@@ -453,6 +517,7 @@ let Cards = {
         {
           "Name": "Magnetic Boots",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Attach to a Face-Down minion. That minion becomes Persistent."
         },
         {
@@ -463,29 +528,41 @@ let Cards = {
         {
           "Name": "Rain Dance",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Free. Reveal: Exile any number of neutral cards in your hand. Then draw that many cards, of the same tiers."
         },
         {
           "Name": "Divine-ish Shield",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Free. Return a friendly minion to your hand."
         },
         {
           "Name": "Rocade",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Free. Swap 2 cards on your board (with all buffs/debuffs)."
-        }
+        },
+        {
+          "Name": "Face Sucker",
+          "Power": "4",
+          changedInVersion: 3,
+          "Type": "Demon/Undead",
+          "Text": "On slide up: Return the minion above to your hand.",
+        },
   ],
   "Tier 3": [
       {
         "Name": "Archangel",
         "Power": 0,
-        "Text": "In combat only, show your opponent your cards in hand. This minion has extra power equal to the sum of your hand cards' Tiers.",
+        changedInVersion: 3,
+        "Text": "In combat only, show your opponent 2 cards in your Hand. This minion has extra Power equal to the sum of those 2 cards' Powers.",
         "Type": "Angel"
       },
       {
         "Name": "Death Master",
         "Power": "5",
+        addedInVersion: 3,
         "Text": "Your Death effects happen twice!",
         "Type": "Undead"
       },
@@ -520,12 +597,14 @@ let Cards = {
       {
         "Name": "Entity From Beyond",
         "Power": "-20",
-        "Text": "In combat only, has (+1) for each Point you have.",
-        "Type": "Demon/Undead"
+        changedInVersion: 3,
+        "Text": "In combat only, this has extra Power equal to (5) x Round Number.",
+        "Type": "Undead/Faey"
       },
       {
         "Name": "Strawberrius the Cruel",
-        "Power": 4.5,
+        "Power": 2,
+        changedInVersion: 3,
         "Text": "Every Turn Start: Draw a Tier 1 Card. Attach it to this as extra Power!",
         "Type": "Demon/Faey"
       },
@@ -548,15 +627,10 @@ let Cards = {
         "Type": "Undead"
       },
       {
-        "Name": "Face Sucker",
-        "Power": "4",
-        "Type": "Undead",
-        "Text": "On slide up: Attach to the minion this slid over.",
-      },
-      {
         "Name": "Warlock",
         "Power": "5",
-        "Text": "Whenever you reveal a Spell, gain (+2)",
+        changedInVersion: 3,
+        "Text": "Whenever you reveal a Spell, gain (+3)",
         "Type": "Human"
       },
       {
@@ -597,14 +671,16 @@ let Cards = {
       },
       {
         "Name": "Living Well",
-        "Power": "5",
+        "Power": "3",
+        changedInVersion: 3,
         "Text": "Whenever a minion gains a buff(s), give it an extra (+1) (doesn't retrigger similar effects).",
         "Type": "Faey"
       },
       {
         "Name": "Hoarder Drake",
-        "Power": "5",
-        "Text": "In combat only, has extra (+1) for each card in your hand",
+        "Power": "3",
+        changedInVersion: 3,
+        "Text": "In combat only, this has extra (+1) Power for each card in your hand",
         "Type": "Demon"
       },
       {
@@ -616,14 +692,16 @@ let Cards = {
       {
         "Name": "Witch Hunter",
         "Power": "6",
-        "Text": "Reveal: gain (+1) for each Spell in your graveyard.",
+        changedInVersion: 3,
+        "Text": "In combat only, this has (+2) Power for each Spell in your Graveyard.",
         "Type": "Human"
       },
       {
         "Name": "Bard",
-        "Power": "5.5",
+        "Power": "4.5",
+        changedInVersion: 3,
         "Type": "Human",
-        "Text": "Reveal: gain (+1) for each Minion type you have on board (excluding this minion)."
+        "Text": "Reveal: gain (+2) for each Minion type you have on board."
       },
       {
         "Name": "Dead Dragon",
@@ -657,24 +735,28 @@ let Cards = {
       },
       {
         "Name": "Overgrown Carnie",
-        "Power": "6",
-        "Text": "Persistent on Front Row.",
+        "Power": "5",
+        changedInVersion: 3,
+        "Text": "Reveal: attach a friendly minion with all its buffs and attachments to this (eat it)!",
         "Type": "Faey"
       },
       {
         "Name": "Curse Ettin",
         "Power": "6",
+        changedInVersion: 3,
         "Text": "Death: give a minion of each other player (-2).",
         "Type": "Demon"
       },
       {
         "Name": "7-Handed Rakshasa",
-        "Power": "7",
+        "Power": "7.7",
+        changedInVersion: 3,
         "Type": "Demon"
       },
       {
         "Name": "Hell Drake",
-        "Power": "8.5",
+        "Power": "10",
+        changedInVersion: 3,
         "Text": "Reveal: discard a card.",
         "Type": "Demon"
       },
@@ -716,6 +798,8 @@ let Cards = {
 Cards['Tier 1'] = Cards['Tier 1'].map(card => ({...card, "Tier": "I"}))
 Cards['Tier 2'] = Cards['Tier 2'].map(card => ({...card, "Tier": "II"}))
 Cards['Tier 3'] = Cards['Tier 3'].map(card => ({...card, "Tier": "III"}))
+
+const AllCards = [...Cards['Tier 1'], ...Cards['Tier 2'], ...Cards['Tier 3']]
 
 
 
@@ -844,7 +928,7 @@ const WarlordCards = [
     "Text": "Gains (+1) whenever a card enters your Graveyard.",
     "Power": "3",
     "Color": "Pink",
-    "Type": "Faey/Undead"
+    "Type": "Undead/Faey"
   },
   {
     "Name": "Hemp Elemental",
