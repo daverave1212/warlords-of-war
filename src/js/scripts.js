@@ -21,7 +21,7 @@ async function drawCard(canvas, card, x, y, isWarlord=false) {
     await drawImageOnCanvasAsync(canvas, `res/Cards/${Name}.png`, x, y, CARD_WIDTH, CARD_WIDTH)
     await drawImageOnCanvasAsync(canvas, 'res/Frame.png', x, y, CARD_WIDTH, CARD_HEIGHT)
 
-    const nameSize = Name.length <= 19? 47 : Name.length > 30? 26 : 37
+    const nameSize = Name.length <= 19? 47 :Name.length > 28 && Name.length < 31? 31 :Name.length > 30? 26 : 37
     const fontColor = Color != null? colorToRGB[Color] : 'white'
 
     await drawText({
@@ -366,7 +366,7 @@ Array.prototype.sortCards = function() {
 }
 
 createCardsForPrint([], AllCards
-    .filter(c => c.changedInVersion == 3)
+    .filter(c => c.addedInVersion == 3 || c.changedInVersion == 3)
     .sortCards()
     .map(c => c.Name)
 )

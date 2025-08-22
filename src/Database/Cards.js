@@ -192,13 +192,6 @@ let Cards = {
           Type: "Spell"
         },
         {
-          "Name": "Stealthy Clopper",
-          "Power": "2",
-          removedInVersion: 3,
-          "Text": "Trigger: play when combat starts.",
-          "Type": "Demon"
-        },
-        {
           "Name": "Corpse Bagger",
           "Power": "2.5",
           "Text": "Death: add the top card from the Tier 2 deck to your Graveyard.",
@@ -326,9 +319,17 @@ let Cards = {
         },
         {
           "Name": "Crynivorous Plant",
-          "Power": "2.5",
-          "Text": "If this lane loses a battle, your next lane has (+3) this combat.",
+          "Power": "-5",
+          removedInVersion: 3,
+          "Text": `Persistent. `,
           "Type": "Faey"
+        },
+        {
+          Name: "POOP",
+          Power: -5,
+          addedInVersion: 3,
+          Text: "After Reveal: put this on any empty slot on somoene else's board. Death: put this back in YOUR Graveyard.",
+          Type: "Spell"
         },
         {
           "Name": "Unicorn",
@@ -346,7 +347,6 @@ let Cards = {
           "Name": "Stick Bug",
           "Power": "3",
           "Text": "Persistent",
-          removedInVersion: 3,
           "Type": "Faey"
         },
         {
@@ -374,15 +374,30 @@ let Cards = {
           "Type": "Demon"
         },
         {
+          "Name": "Stealthy Clopper",
+          "Power": "3",
+          removedInVersion: 3,
+          "Text": "When this enters your hand, show it to everyone, then draw 2 Tier I cards.",
+          "Type": "Demon"
+        },
+        {
+          Name: "Productive but Angry Peasants",
+          Power: 3,
+          addedInVersion: 3,
+          "Text": "When this enters your hand, show it to everyone, then draw 2 Tier I cards.",
+          Type: "Human"
+        },
+        {
           "Name": "Anti-Necromancer",
           "Power": "4",
           changedInVersion: 3,
           "Text": "Reveal: Choose any minion. Its effect no longer works, then it loses half of its buffs/debuffs.",
-          "Type": "Undead"
+          "Type": "Human/Undead"
         },
         {
           "Name": "Naked Barbarian",
           "Power": "4",
+          removedInVersion: 3,
           "Text": "In combat only, has (+1) for each empty slot on your board.",
           "Type": "Human"
         },
@@ -395,14 +410,22 @@ let Cards = {
         {
           "Name": "Charismatic Ogre",
           "Power": "4",
+          removedInVersion: 3,
           "Text": "Gain (+1) whenever you reveal a minion (except the turn when this is revealed)",
           "Type": "Demon"
         },
         {
           "Name": "Tie Plant",
           "Power": "4",
+          removedInVersion: 3,
           "Text": "Reveal: Choose a minion type. Give all your minions of that type (+1).",
           "Type": "Faey"
+        },
+        {
+          Name: "Good Jeans",
+          addedInVersion: 3,
+          Type: "Spell",
+          Text: "Reveal: Choose a minion type. Give all your minions of that type (+1)."
         },
         {
           "Name": "Philosopher",
@@ -419,19 +442,29 @@ let Cards = {
         },
         {
           "Name": "Annoyed Cyclopian",
-          "Power": "6",
-          "Text": "Has (-2) if there's another minion on the same lane",
+          "Power": "9",
+          changedInVersion: 3,
+          "Text": "In combat only, this has (-1) Power for each other card on your board.",
           "Type": "Demon"
         },
         {
           "Name": "Very Tall Dude",
           "Power": "3",
+          removedInVersion: 3,
           "Type": "Human",
           "Text": "Reveal: Choose one - draw a card for each Human on your board (minimum 1), or give a minion (+1) for each Human on your board (minimum (+1))."
         },
         {
+          Name: "Spelllover",
+          Power: 3,
+          addedInVersion: 3,
+          Type: "Human",
+          Text: "Every Turn Start: put a Spell from your Graveyard face-down anywhere on your board."
+        },
+        {
           "Name": "Math Teacher",
           "Power": "3.5",
+          removedInVersion: 3,
           "Type": "Human",
           "Text": "Reveal: Buff all your Humans up to the nearest multiple of 3 (for fractions, nearest to 3.5, 6.5, 9.5, etc)."
         },
@@ -507,6 +540,7 @@ let Cards = {
         {
           "Name": "Warcry",
           "Type": "Spell",
+          removedInVersion: 3,
           "Text": "Free. Obvious. Pay 1 Cardboard to play an extra card this turn."
         },
         {
@@ -579,8 +613,15 @@ let Cards = {
       {
         "Name": "Gate Demon",
         "Power": "0",
+        removedInVersion: 3,
         "Text": "In combat, tie this lane battle, and gain 1 Point. Then destroy this.",
         "Type": "Demon"
+      },
+      {
+        Name: "The Conjuring (of Demons)",
+        addedInVersion: 3,
+        Text: "After Combat: return any minion to its owner's hand. If it's a Demon, put it in your hand instead.",
+        Type: "Spell"
       },
       {
         "Name": "Drip Elemental",
@@ -652,10 +693,11 @@ let Cards = {
         "Type": "Undead"
       },
       {
-        "Name": "Hazed Rook",
+        "Name": "Hero",
         "Power": "5",
+        addedInVersion: 3,
         "Text": "On slide up: gain all buffs/debuffs from the destroyed minion.",
-        "Type": "Faey"
+        "Type": "Human"
       },
       {
         "Name": "Hat Tricker",
@@ -666,6 +708,7 @@ let Cards = {
       {
         "Name": "Slightly Evil Djinn",
         "Power": "5",
+        changedInVersion: 3,
         "Text": "Whenever you buff another minion, this also gains those buffs.",
         "Type": "Demon"
       },
@@ -724,14 +767,16 @@ let Cards = {
       {
         "Name": "Big Ogre",
         "Power": "6",
+        removedInVersion: 2,
         "Type": "Faey",
         "Text": "In combat only, has (+1) for each Warlord Card on both boards."
       },
       {
         "Name": "Knight",
-        "Power": "6",
+        "Power": "5",
+        changedInVersion: 3,
         "Type": "Human",
-        "Text": "If this lane wins a combat, gain 1 extra Point."
+        "Text": "Your Reveal effects trigger twice!"
       },
       {
         "Name": "Overgrown Carnie",
@@ -742,15 +787,21 @@ let Cards = {
       },
       {
         "Name": "Curse Ettin",
-        "Power": "6",
+        "Power": "5",
         changedInVersion: 3,
-        "Text": "Death: give a minion of each other player (-2).",
+        "Text": "Reveal: give a minion of each other player (-3).",
         "Type": "Demon"
       },
       {
         "Name": "7-Handed Rakshasa",
         "Power": "7.7",
-        changedInVersion: 3,
+        removedInVersion: 3,
+        "Type": "Demon"
+      },
+      {
+        "Name": "8-Handed Rakshasa",
+        "Power": "8.8",
+        addedInVersion: 3,
         "Type": "Demon"
       },
       {
@@ -762,7 +813,8 @@ let Cards = {
       },
       {
         "Name": "Slim Man",
-        "Power": "9",
+        "Power": "10",
+        changedInVersion: 3,
         "Type": "Demon",
         "Text": "Reveal: Get (-1) for each card in your hand."
       },
@@ -784,7 +836,8 @@ let Cards = {
       {
         "Name": "Chi Borrow",
         "Type": "Spell",
-        "Text": "Reveal: Each other player must give a minion (-1). Give a total of (+3) to your minions, distributed as you like."
+        addedInVersion: 3,
+        "Text": "Reveal: Each other player must give a minion (-2). Give a total of (+4) to your minions, distributed as you like."
       },
       {
         "Name": "Pot of Speed",

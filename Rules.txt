@@ -29,8 +29,8 @@ Menagerie mug that's +2 on level 2
 - Finger Training (II)
 - Rain Dance (II)
 - Philosopher (II)
-- Stick Bug (II)
 - Magnetic Boots (II)
+- Warcry (II)
 
     .~ Maybe Removed ~.
 - Dead Skeleton (I)
